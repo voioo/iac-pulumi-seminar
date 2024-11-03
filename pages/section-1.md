@@ -1,141 +1,274 @@
-# Infrastructure Evolution
+---
+layout: section
+class: text-center
+---
 
-## Track 1: Infrastructure Management
-<v-clicks>
+# Evolution of Infrastructure & Systems
 
-- Physical Servers (2000s)
-  - Manual configuration
-  - Physical hardware constraints
-  - Weeks to provision
-  - Server-to-admin ratio ~10:1
-
-- Virtualization Revolution (Late 2000s)
-  - Better resource utilization
-  - Days to provision
-  - Server-to-admin ratio ~100:1
-
-- Cloud Era (Early 2010s)
-  - On-demand resources
-  - Minutes to provision
-  - Server-to-admin ratio ~500:1
-
-- Infrastructure as Code (Late 2010s)
-  - Programmable infrastructure
-  - Seconds to provision
-  - Server-to-admin ratio ~1000:1
-
-</v-clicks>
+<div class="opacity-80 italic mb-4">
+Two parallel revolutions that shaped modern computing
+</div>
 
 <!--
-# Presenter Notes
-- Track 1: Infrastructure Management progression
-- Track clear progression in speed and scale
-- Link improvements to technological advances
-- Ask: "Why did each transition happen?"
+# Speaker Notes
+- We'll look at two parallel stories
+- Both happened during your lifetime
+- Each drove changes in the other
+- Think about connections between them
 -->
 
 ---
+layout: center
+---
 
-# Software Systems Evolution
+# Infrastructure Evolution Timeline
+
+```mermaid
+timeline
+    title Infrastructure Management Journey
+    section 2000s
+        Physical Era : Manual Operations
+        : Datacenter Hardware
+        : Weeks to Deploy
+    section Late 2000s
+        Virtualization : VMware & Hypervisors
+        : Template-based
+        : Days to Deploy
+    section Early 2010s
+        Cloud Era : API-driven Resources
+        : On-demand Scaling
+        : Minutes to Deploy
+    section Late 2010s
+        IaC Era : Code-defined
+        : Version Controlled
+        : Seconds to Deploy
+```
+
+<!--
+# Speaker Notes
+- Start with simple timeline view
+- Emphasize the progression of speed
+- Point out key technology shifts
+- Set up for detailed metrics
+-->
+
+---
+layout: center
+---
+
+# Infrastructure Evolution Metrics
+
+<table class="metrics-table">
+  <thead>
+    <tr>
+      <th>Era</th>
+      <th>Time to Provision</th>
+      <th>Servers per Admin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-click="1">
+      <td>Physical</td>
+      <td>Weeks</td>
+      <td>10</td>
+    </tr>
+    <tr v-click="2">
+      <td>Virtual</td>
+      <td>Days</td>
+      <td>100</td>
+    </tr>
+    <tr v-click="3">
+      <td>Cloud</td>
+      <td>Minutes</td>
+      <td>500</td>
+    </tr>
+    <tr v-click="4">
+      <td>IaC</td>
+      <td>Seconds</td>
+      <td>1000+</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+.metrics-table {
+  @apply w-4/5 mx-auto mt-8;
+}
+.metrics-table th {
+  @apply px-6 py-3 text-left bg-blue-500 bg-opacity-10 font-semibold;
+}
+.metrics-table td {
+  @apply px-6 py-4 border-t border-gray-200 border-opacity-50;
+}
+</style>
+
+<!--
+# Speaker Notes
+
+Key points to highlight:
+- Each era brings order of magnitude improvement
+- Provision time: Weeks → Seconds (10000x faster)
+- Scale: 10 → 1000+ servers (100x capacity)
+
+Questions for engagement:
+- "What technological changes enabled each jump?"
+- "Why did organizations need this scale?"
+- "What skills were needed at each stage?"
+-->
+---
+layout: center
+---
+
+# Systems Architecture Evolution
+
+```mermaid
+timeline
+    title Software Systems Evolution
+    section Early 2000s
+        Monolithic : Single Application
+        : One Database
+        : Simple Deploy
+    section Mid 2000s
+        Service-Oriented : Multiple Services
+        : Multiple Databases
+        : Coordinated Deploy
+    section Early 2010s
+        Cloud Native : Microservices
+        : Distributed Data
+        : Container Deploy
+    section Late 2010s
+        Modern : Serverless & Containers
+        : Multi-cloud
+        : Dynamic Deploy
+```
+
+<!--
+# Speaker Notes
+- Connect to their software development experience
+- Point out increasing complexity
+- Show how infrastructure needs grew
+- Link to their coursework examples
+-->
+
+---
+layout: center
+---
+
+# Key System Characteristics
 
 <v-clicks>
 
-- Simple Web Apps
-  - Monolithic applications
-  - Single database
-  - Simple deployment needs
-  - Few environmental variables
-
-- Service-Oriented
-  - Multiple connected services
-  - Several databases
-  - More complex deployments
-  - Growing config complexity
-
-- Cloud Native
-  - Microservices architecture
-  - Distributed databases
-  - Complex service mesh
-  - Massive configuration needs
-
-- Modern Distributed
-  - Serverless components
-  - Multi-cloud deployments
-  - Dynamic scaling needs
-  - Infrastructure as part of application
+- Monolithic: One team, one deploy, one database
+- Service-Oriented: Multiple teams, coordinated deploys
+- Cloud Native: Many small services, continuous deployment
+- Modern: Mix of serverless, containers, and cloud services
 
 </v-clicks>
 
-<!--
-# Presenter Notes
-- Highlight increasing complexity
-- Connect to their software development experience
-- Point out growing infrastructure needs
-- Ask about implications for management
--->
+<div v-click class="mt-12 text-center text-xl">
 
+💡 More Components = More Infrastructure Complexity
+
+</div>
+
+<!--
+# Speaker Notes
+
+Expand on each point:
+- Monolithic: Like your early web projects - simple LAMP stack
+- SOA: Teams start interfering with each other, need coordination
+- Cloud Native: Kubernetes orchestration becomes necessary
+- Modern: Mix of approaches based on needs
+
+Additional context to mention:
+- Each stage requires more automation
+- Manual processes don't scale
+- Teams need independence
+- Configuration becomes critical
+
+Key message: Infrastructure complexity follows system complexity - this is why we need better tools and practices.
+
+Question to ask: "What stage are your current projects at?"
+-->
+---
+layout: center
 ---
 
 # The Pets vs Cattle Revolution
 
-## Pets Approach (Traditional)
-<v-clicks>
+<div class="flex items-center justify-center gap-8">
+  <div v-click class="text-center">
+    <div class="text-6xl">🐈</div>
+    <div class="mt-2 opacity-70">Named Servers</div>
+    <div class="text-sm">("db-master")</div>
+  </div>
 
-- Named servers ("Zeus", "Apollo")
-- Individual care and maintenance
-- Manual recovery procedures
-- Emergency fixes common
-- High operational overhead
+  <div v-click class="text-5xl text-blue-400">
+    →
+  </div>
 
-</v-clicks>
-
-## Cattle Approach (Modern)
-<v-clicks>
-
-- Numbered resources ("web-042")
-- Standardized management
-- Automatic replacement
-- Process-driven operations
-- Scalable maintenance
-
-</v-clicks>
+  <div v-click class="text-center">
+    <div class="text-6xl">🐄</div>
+    <div class="mt-2 opacity-70">Numbered Resources</div>
+    <div class="text-sm">("web-042")</div>
+  </div>
+</div>
 
 <!--
-# Presenter Notes
-- Explain the paradigm shift in management
-- Connect to modern deployment practices
-- Link to concepts of immutability
-- Ask about benefits and challenges
--->
+# Speaker Notes
 
+Key message: Fundamental shift in how we think about servers
+
+Additional context to mention:
+- Pets: We care for them individually, nurse them back to health
+- Cattle: Replaceable, automated management
+- Like your laptop (pet) vs a Docker container (cattle)
+- This mindset shift enabled modern cloud scaling
+
+Question: "Which approach do you use in your projects?"
+-->
+---
+layout: center
 ---
 
-# Current Landscape Check
+# Quick Questions
 
-Let's understand your background:
+<div class="text-xl space-y-8">
+  <div v-click class="question">
+    Who has deployed to the cloud?
+  </div>
 
-<v-clicks>
+  <div v-click class="question">
+    Experience with infrastructure tools?
+  </div>
 
-## Development Experience
-- Who has deployed to the cloud?
-- Experience with infrastructure tools?
-- Automated deployment experience?
-- Which cloud providers?
+  <div v-click class="question">
+    Automated deployment experience?
+  </div>
 
-## Areas of Interest
-- Architecture design
-- DevOps practices
-- Platform engineering
-- Cloud native development
-
-</v-clicks>
+  <div v-click class="question">
+    Which cloud providers?
+  </div>
+</div>
 
 <!--
-# Presenter Notes
-- Use for audience engagement
-- Adjust upcoming content based on responses
-- Look for experienced participants
-- Note areas for deeper discussion
+# Speaker Notes
+
+Interaction approach:
+- Pause after each question
+- Ask for raised hands
+- Note the distribution of experience
+- Use this to adjust upcoming examples
+
+Look for:
+- AWS/Azure experience for examples
+- Prior automation experience
+- Tools they're familiar with
+
+This helps us:
+- Gauge the audience level
+- Find experienced students to engage
+- Know which concepts need more explanation
 -->
 
 ---
@@ -167,3 +300,4 @@ Let's understand your background:
 - Set up for infrastructure solutions
 - Bridge to next section
 -->
+---
