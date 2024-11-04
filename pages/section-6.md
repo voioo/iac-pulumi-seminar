@@ -1,198 +1,152 @@
-# Rethinking Infrastructure Definition
+---
+layout: section
+---
 
-## System Initiative Approach
-<v-clicks>
+# Future Trends & Alternative Approaches
+Rethinking Infrastructure Management
 
-### Digital Twins of Infrastructure
-- 1:1 mapping with real resources
+<!--
+# Speaker Notes
+Setup (1 min):
+- "Let's look at where infrastructure management might be heading..."
+- Connect to limitations we've seen in current tools
+-->
+
+---
+layout: two-cols-header
+---
+
+# System Initiative Approach
+Reimagining Infrastructure as Digital Twins
+
+::left::
+
+```mermaid {scale: 0.7}
+flowchart TD
+    A[Infrastructure Code] -->|Real-time| B[Digital Twin]
+    B -->|Instant Feedback| A
+    B -->|Reflects| C[Real Infrastructure]
+    style B fill:#f9f,stroke:#333
+```
+
+::right::
+
+## Key Concepts
+
+<div v-click>
+
+- 1:1 resource mapping
 - Real-time state tracking
-- Immediate feedback loop
+- Instant validation
+- Live collaboration
+- Visual feedback
 
-### Reactive Programming Model
-- Infrastructure as reactive functions
-- Real-time validation
-- Built-in state management
-
-### Collaborative Design
-- Real-time multiplayer experience
-- Role-specific interfaces
-- Built-in visualization
-
-</v-clicks>
+</div>
 
 <!--
-# Presenter Notes
-- Explain new paradigms
-- Connect to their CS knowledge
-- Show how this differs from current IaC
-- Discuss implications
+# Speaker Notes
+
+Setup (1-2 mins):
+- "Imagine infrastructure that gives instant feedback..."
+- Compare to current workflow limitations
+
+Key Concepts (3-4 mins):
+
+1. Digital Twins
+   - Perfect mirror of infrastructure
+   - Real-time state reflection
+   - Immediate validation
+   - Live updates
+
+2. Real-world Impact
+   - No more delayed feedback
+   - Catch issues immediately
+   - Collaborate in real-time
+   - See changes instantly
+
+3. Differences from Current Tools
+   - Traditional: Plan → Apply → Wait
+   - System Initiative: Instant Feedback Loop
+   - Traditional: Static Files
+   - System Initiative: Live Environment
+
+Connect to Their Experience:
+- "Think about game development environments"
+- "Like live reload in web development"
+- "Similar to real-time collaboration in Google Docs"
+
+Questions to Ask:
+- "How would this change your workflow?"
+- "Where would instant feedback help most?"
+- "What challenges do you see with this approach?"
 -->
 
 ---
+layout: center
+---
 
-# Different Solutions Emerging
+# Current vs Future
 
-## Infrastructure Languages
-<v-clicks>
-
-### Wing Language
-- Purpose-built for cloud
-- Built-in cloud patterns
-- Type-safe resource handling
-```typescript
-bring cloud;
-let api = new cloud.Api();
-let bucket = new cloud.Bucket();
+```mermaid {scale: 0.8}
+graph TB
+    subgraph Current ["Current Approach"]
+        A1[Write Code] --> B1[Plan]
+        B1 --> C1[Review]
+        C1 --> D1[Apply]
+        D1 --> E1[Verify]
+    end
+    style Current fill:#ffcccc
+```    
+```mermaid {scale: 0.8}
+graph TB    
+    subgraph Future ["System Initiative"]
+        A2[Edit Infrastructure] --> B2[Instant Feedback]
+        B2 --> A2
+        B2 --> C2[Auto-validate]
+        C2 --> D2[Live Preview]
+    end
+    style Future fill:#90EE90
 ```
 
-### CDKTF
-- Infrastructure in familiar languages
-- Strong typing
-- IDE integration
-```typescript
-const bucket = new s3.Bucket(this, 'MyBucket', {
-  versioned: true,
-  removalPolicy: RemovalPolicy.DESTROY
-});
-```
-
-### Nickel
-- Configuration language
-- Strong type system
-- Built for cloud configuration
-
-</v-clicks>
-
 <!--
-# Presenter Notes
-- Compare approaches
-- Show what makes each unique
-- Discuss trade-offs
-- Connect to current limitations
--->
+# Speaker Notes
 
----
+Setup (1 min):
+- "Let's compare the workflows..."
 
-# Key Trends
+Key Differences (3-4 mins):
 
-## Moving Beyond Just State
-<v-clicks>
+1. Feedback Speed
+   - Current: Minutes to hours
+   - Future: Milliseconds
+   - Impact on development speed
+   - Error detection
 
-- Real-time feedback
-- Live collaboration
-- Infrastructure simulation
-- Predictive analysis
-- Dynamic optimization
+2. Validation Approach
+   - Current: Separate steps
+   - Future: Continuous
+   - Built-in safety
+   - Earlier problem detection
 
-</v-clicks>
+3. Team Collaboration
+   - Current: Async reviews
+   - Future: Real-time collaboration
+   - Shared understanding
+   - Faster iterations
 
-## Development Experience
-<v-clicks>
+Real-world Connection:
+- Like modern development environments
+- Similar to collaborative tools
+- Evolution of developer experience
 
-- Better IDE integration
-- Faster feedback cycles
-- More intuitive interfaces
-- AI-assisted development
-- Enhanced visualization
+Questions to Explore:
+- "Which workflow looks better to you?"
+- "Where would this help most?"
+- "What challenges do you see?"
 
-</v-clicks>
-
-<!--
-# Presenter Notes
-- Connect to problems we saw today
-- Show how new approaches solve them
-- Discuss what might come next
-- Get their thoughts on future
--->
-
----
-
-# Core Ideas to Consider
-
-## Infrastructure as Data vs Code
-<v-clicks>
-
-### Data-Centric
-- Declarative definitions
-- Schema-driven
-- Validation focused
-- Clear boundaries
-
-### Code-Centric
-- Programmatic control
-- Flexible abstractions
-- Reusable patterns
-- Rich tooling
-
-</v-clicks>
-
-<!--
-# Presenter Notes
-- Compare approaches
-- Discuss pros and cons
-- Ask for their preferences
-- Link to their experience
--->
-
----
-
-# Future Considerations
-
-## Real-time vs Batch Updates
-<v-clicks>
-
-### Batch (Current)
-- Plan then apply
-- Clear state transitions
-- Review focused
-- Change sets
-
-### Real-time (Future)
-- Immediate feedback
-- Continuous validation
-- Live collaboration
-- Dynamic updates
-
-</v-clicks>
-
-<!--
-# Presenter Notes
-- Discuss implications
-- Share potential challenges
-- Get their thoughts
-- Explore possibilities
--->
-
----
-
-# Discussion Points
-
-## Questions to Consider
-<v-clicks>
-
-- How to improve feedback loops?
-- What makes infrastructure truly collaborative?
-- Is pure code the right model?
-- How to balance power and simplicity?
-- What role will AI play?
-
-</v-clicks>
-
-## Looking Forward
-<v-clicks>
-
-- Evolution of tools
-- Team dynamics
-- Skill requirements
-- Industry direction
-- Your role in the future
-
-</v-clicks>
-
-<!--
-# Presenter Notes
-- Encourage discussion
-- Get their perspectives
-- Share Mews thoughts
-- Open for questions
+End with Future Vision:
+- Infrastructure as responsive environment
+- Teams working together in real-time
+- Faster, safer changes
+- Better developer experience
 -->
