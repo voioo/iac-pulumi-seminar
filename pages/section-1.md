@@ -12,13 +12,14 @@ Two parallel revolutions that shaped modern computing
 <!--
 # Speaker Notes
 - We'll look at two parallel stories
-- Both happened during your lifetime
-- Each drove changes in the other
+- Both happened in the last 20 years
+- The both lead to increase of complexity in our systems and our infrastructure
 - Think about connections between them
 -->
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # Infrastructure Evolution Timeline
@@ -54,6 +55,7 @@ timeline
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # Infrastructure Evolution Metrics
@@ -117,6 +119,7 @@ Questions for engagement:
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # Systems Architecture Evolution
@@ -132,14 +135,15 @@ timeline
         Service-Oriented : Multiple Services
         : Multiple Databases
         : Coordinated Deploy
-    section Early 2010s
+    section 2010s
         Cloud Native : Microservices
         : Distributed Data
         : Container Deploy
-    section Late 2010s
+    section 2020s
         Modern : Serverless & Containers
+        : Many services, many databases
         : Multi-cloud
-        : Dynamic Deploy
+        : Many Deployments
 ```
 
 <!--
@@ -147,11 +151,11 @@ timeline
 - Connect to their software development experience
 - Point out increasing complexity
 - Show how infrastructure needs grew
-- Link to their coursework examples
 -->
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # Key System Characteristics
@@ -177,7 +181,7 @@ layout: center
 Expand on each point:
 - Monolithic: Like your early web projects - simple LAMP stack
 - SOA: Teams start interfering with each other, need coordination
-- Cloud Native: Kubernetes orchestration becomes necessary
+- Cloud Native: Kubernetes orchestration becomes common
 - Modern: Mix of approaches based on needs
 
 Additional context to mention:
@@ -188,10 +192,11 @@ Additional context to mention:
 
 Key message: Infrastructure complexity follows system complexity - this is why we need better tools and practices.
 
-Question to ask: "What stage are your current projects at?"
+Question to ask: "What architectures have you seen and worked with?"
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # The Pets vs Cattle Revolution
@@ -229,6 +234,7 @@ Question: "Which approach do you use in your projects?"
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # Quick Questions
@@ -255,7 +261,6 @@ layout: center
 # Speaker Notes
 
 Interaction approach:
-- Pause after each question
 - Ask for raised hands
 - Note the distribution of experience
 - Use this to adjust upcoming examples
@@ -264,13 +269,11 @@ Look for:
 - AWS/Azure experience for examples
 - Prior automation experience
 - Tools they're familiar with
-
-This helps us:
-- Gauge the audience level
-- Find experienced students to engage
-- Know which concepts need more explanation
+- Which concepts need more explanation
 -->
 
+---
+hideInToc: true
 ---
 
 # The Modern Challenge

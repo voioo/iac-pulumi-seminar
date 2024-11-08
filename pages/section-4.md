@@ -1,3 +1,7 @@
+---
+hideInToc: true
+---
+
 # Basic Infrastructure Implementation
 
 ## What We'll Build
@@ -30,6 +34,8 @@
 - Check Pulumi login status
 -->
 
+---
+hideInToc: true
 ---
 
 # Starting Simple
@@ -68,6 +74,8 @@
 -->
 
 ---
+hideInToc: true
+---
 
 # Adding Database
 
@@ -105,6 +113,8 @@
 -->
 
 ---
+hideInToc: true
+---
 
 # Container App Setup
 
@@ -138,6 +148,8 @@
 - Point out best practices
 -->
 
+---
+hideInToc: true
 ---
 
 # Live Deployment
@@ -173,6 +185,8 @@
 -->
 
 ---
+hideInToc: true
+---
 
 # Making Changes
 
@@ -207,6 +221,8 @@
 -->
 
 ---
+hideInToc: true
+---
 
 # Preview Limitations
 
@@ -238,6 +254,8 @@
 - Mention common pitfalls
 -->
 
+---
+hideInToc: true
 ---
 
 # Team Workflow Demo

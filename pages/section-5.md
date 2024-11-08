@@ -1,5 +1,17 @@
 ---
+layout: section
+class: text-center
+---
+
+# Internal platforms
+
+<div class="opacity-80 italic mb-4">
+Build reusable patterns at scale
+</div>
+
+---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Infrastructure Delivery Evolution
@@ -71,13 +83,11 @@ Real World Connection:
 - Reference familiar tools (GitHub, Azure Portal)
 - Connect to their project experiences
 - Discuss modern DevOps practices
-
-Transition to Next Slides:
-- "These benefits sound great, but achieving them brings its own challenges..."
 -->
 
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Key Platform Challenges
@@ -177,6 +187,7 @@ Questions to Ask:
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # Internal Developer Platform
@@ -246,6 +257,7 @@ Transition:
 
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Platform Benefits
@@ -339,6 +351,7 @@ Next Steps:
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # The Mews Journey
@@ -415,6 +428,7 @@ Connect to Their Experience:
 
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Before and After
@@ -498,6 +512,7 @@ Transition to Platform:
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # Why Platform Worked
@@ -560,6 +575,7 @@ Lead Into Next Section:
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # Evolution of Our Infrastructure SDK
@@ -595,6 +611,7 @@ Real Progression:
 
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # The Evolution Steps
@@ -677,6 +694,7 @@ Show in IDE:
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # High-Level SDK Today
@@ -743,6 +761,7 @@ Questions to Ask:
 
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Key Design Principles
@@ -855,6 +874,8 @@ Transition to Next Topic:
 - Demonstrate principles in action
 -->
 
+---
+hideInToc: true
 ---
 
 # Current Challenges

@@ -16,16 +16,12 @@ Transition points:
 - We've seen how we got here
 - Now let's look at how we solve it
 - Connect past problems to current solutions
-- Setup for hands-on learning
-
-Energy shift:
-- Moving from history to practical
-- From "why" to "how"
-- Getting ready for action
+- Setup for demo
 -->
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # Two Ways to Create Infrastructure
@@ -53,6 +49,7 @@ layout: center
 
 <div v-click class="mt-12 text-center text-xl">
   Let's see what this means in practice...
+  (demo)
 </div>
 
 <!--
@@ -80,6 +77,7 @@ Manual processes don't scale with modern needs
 
 ---
 layout: center
+hideInToc: true
 ---
 # Issues with manual management
 
@@ -163,6 +161,7 @@ Ask about principles:
 -->
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # IaC Tools Landscape
@@ -206,10 +205,11 @@ Key points:
 
 Questions to ask:
 - "Used any of these tools?"
-- "Seen them in internships?"
+- "Seen them in internships/jobs?"
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # The Development Workflow
@@ -280,6 +280,7 @@ Questions:
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # Team Review Process
@@ -351,10 +352,10 @@ Key points:
 
 Demo teaser:
 - "We'll see this in action soon"
-- "You'll create your first PR"
 -->
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Benefits & Challenges
@@ -435,6 +436,7 @@ Start with benefits:
 
 Then challenges:
 - Be honest about difficulties
+- Not appripriate at every scale
 - But show they're manageable
 - Most are one-time costs
 - Common to all new tech adoption

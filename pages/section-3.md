@@ -1,5 +1,17 @@
 ---
+layout: section
+class: text-center
+---
+
+# Pulumi
+
+<div class="opacity-80 italic mb-4">
+Using real code to manage infrastructure
+</div>
+
+---
 layout: default
+hideInToc: true
 ---
 
 # What Makes Pulumi Different
@@ -43,6 +55,7 @@ Demo preparation:
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # Real-World Example: Container App
@@ -86,6 +99,7 @@ Engagement strategy:
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # Same Resource in Pulumi
@@ -131,6 +145,7 @@ Demo preparation:
 -->
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Building Abstractions
@@ -148,14 +163,14 @@ var database = new Database("demo-db", new DatabaseArgs
     ServerName = sqlServer.Name,
     Sku = new SkuArgs
     {
-        Name = "Basic"
+        Name = config.Get("database-sku")
     }
 });
 ```
 
 ::right::
 
-## Infrastructure SDK
+## High-level SDK
 ```csharp {all|1-2|3|4|all}
 // High-level patterns
 var database = new SqlDatabase("demo")
@@ -173,17 +188,11 @@ Key points to emphasize:
 - Reduced cognitive load
 
 Questions to ask:
-- "What other configurations might we add?"
-- "How does this help new team members?"
-- "What patterns from your code could apply here?"
-
-Demo preparation:
-- Show SDK implementation
-- Demonstrate how to explore available methods
-- Show error handling
+- "How does this help new team adopters?"
 -->
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Core Concepts
@@ -244,14 +253,10 @@ Questions to ask:
 - "How is this similar to your application configs?"
 - "What kind of values would you put in stack config?"
 - "How might this help with environment consistency?"
-
-Demo preparation:
-- Show real project structure
-- Compare dev/prod configs
-- Demonstrate stack operations
 -->
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Projects and Stacks in Practice
@@ -323,14 +328,10 @@ Questions to ask:
 - "What would you put in config vs code?"
 - "How could this help with testing?"
 - "What other environments might you need?"
-
-Demo preparation:
-- Show stack switching
-- Display config differences
-- Demonstrate value injection
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # Understanding Resources
@@ -371,17 +372,11 @@ Resource characteristics:
 4. Lifecycle management
 
 Questions to ask:
-- "What resources do you use most?"
-- "How do you handle dependencies now?"
-- "What happens if you delete a dependency?"
-
-Demo preparation:
-- Show dependency graph
-- Demonstrate creation order
-- Show what happens on updates
+- "How do you handle dependencies without IaC?"
 -->
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # State Management
@@ -422,8 +417,6 @@ How Pulumi tracks your infrastructure
 - **Self-Hosted**
   * Azure Blob Storage
   * AWS S3
-  * Local filesystem
-  * Git-based
 
 <!--
 # Speaker Notes
@@ -444,14 +437,10 @@ Questions to ask:
 - "What happens if state is lost?"
 - "How do you track resources now?"
 - "Which backend would you choose?"
-
-Demo preparation:
-- Show state file
-- Demonstrate state refresh
-- Show backend switching
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # Working with State
@@ -502,14 +491,10 @@ Common scenarios:
 
 Questions to ask:
 - "When might state drift occur?"
-- "How often would you refresh?"
-- "What's your backup strategy?"
-
-Demo preparation:
-- Show state drift example
-- Demonstrate refresh
-- Show backup/restore
+- "How would you refresh the state?"
 -->
+---
+hideInToc: true
 ---
 
 # Language Benefits
@@ -540,7 +525,6 @@ Demo preparation:
 
 <!--
 # Presenter Notes
-- Connect to their C# knowledge
 - Show IDE benefits later in demo
 - Highlight productivity gains
 - Compare to YAML/HCL limitations
@@ -548,6 +532,7 @@ Demo preparation:
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # How Pulumi Works
@@ -632,17 +617,12 @@ Key benefits:
 - Native language experience
 
 Questions to ask:
-- "How is this similar to compiler architecture?"
 - "Where would you add new cloud support?"
 - "What happens if a provider operation fails?"
-
-Demo preparation:
-- Show debug logs to illustrate flow
-- Demonstrate provider installation
-- Show multi-cloud example
 -->
 ---
 layout: center
+hideInToc: true
 ---
 
 # Architecture in Action
@@ -706,11 +686,6 @@ Key points:
 Questions to ask:
 - "Where could errors occur?"
 - "How would rollback work?"
-- "What happens if network fails?"
-
-Demo preparation:
-- Show verbose logging
-- Demonstrate error handling
-- Show operation progress
+- "What happens if remote call fails?"
 -->
 ---

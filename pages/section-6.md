@@ -1,9 +1,13 @@
 ---
 layout: section
+class: text-center
 ---
 
 # Future Trends & Alternative Approaches
+
+<div class="opacity-80 italic mb-4">
 Rethinking Infrastructure Management
+</div>
 
 <!--
 # Speaker Notes
@@ -14,6 +18,7 @@ Setup (1 min):
 
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # System Initiative Approach
@@ -83,6 +88,7 @@ Questions to Ask:
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # Current vs Future

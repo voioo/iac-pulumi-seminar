@@ -4,13 +4,19 @@ class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
-  ## Infrastructure as Code with Pulumi
-  Presentation for CS Students
+  # Infrastructure as Code with Pulumi
 drawings:
   persist: false
 transition: slide-left
 title: Infrastructure as Code with Pulumi
 mdc: true
+download: true
+exportFilename: iac-pulumi
+export:
+  format: pdf
+  timeout: 30000
+author: Michal Bajer
+hideInToc: true
 ---
 
 # Infrastructure as Code with Pulumi
@@ -26,20 +32,13 @@ Michal Bajer | Mews | 2024
 -->
 
 ---
+layout: default
+hideInToc: true
+---
 
 # Today's Journey
 
-<v-clicks>
-
-1. Evolution of Infrastructure Management
-2. Understanding Modern Challenges
-3. Infrastructure as Code Foundations
-4. Pulumi Approach & Concepts
-5. Real-world Implementation (Demo)
-6. Enterprise Scale Solutions
-7. Future Trends & Discussion
-
-</v-clicks>
+<Toc minDepth="1" maxDepth="1"></Toc>
 
 <!--
 # Presenter Notes
