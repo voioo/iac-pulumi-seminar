@@ -15,6 +15,7 @@ exportFilename: iac-pulumi
 export:
   format: pdf
   timeout: 30000
+  withToc: true
 author: Michal Bajer
 hideInToc: true
 ---
