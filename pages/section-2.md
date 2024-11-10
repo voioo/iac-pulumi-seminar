@@ -269,7 +269,7 @@ hideInToc: true
     <div class="icon">👩‍💻</div>
     <div class="text">Local Development</div>
     <div class="code-box">
-      main.ts
+      main.cs
     </div>
   </div>
 

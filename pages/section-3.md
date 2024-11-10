@@ -259,13 +259,11 @@ Questions to ask:
 - "How might this help with environment consistency?"
 -->
 ---
-layout: two-cols-header
+layout: default
 hideInToc: true
 ---
 
 # Projects and Stacks in Practice
-
-::left::
 
 ## Project Code (Implementation)
 ```csharp {all|3-4|6-10|12-16|all}
@@ -289,10 +287,12 @@ public class MyStack : Stack
     }
 }
 ```
+---
+layout: default
+hideInToc: true
+---
 
-::right::
-
-## Stack Operations
+# Stack Operations
 ```bash {all|1-2|4-5|7-8|all}
 # List available stacks
 pulumi stack ls
