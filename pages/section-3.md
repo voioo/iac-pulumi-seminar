@@ -69,8 +69,8 @@ resource "azurerm_container_app" "example" {
   
   template {
     container {
-      name   = "examplecontainer"
-      image  = "mcr.microsoft.com/azuredocs/containerapps-helloworld:latest" //Not a real app - fix it
+      name   = "examplecontainerapp"
+      image  = "mcr.microsoft.com/k8se/quickstart:latest"
       cpu    = 0.25
       memory = "0.5Gi"
     }
@@ -83,6 +83,7 @@ resource "azurerm_container_app" "example" {
 
 Key points to emphasize:
 - Real infrastructure example
+- Explain the basic Azure resources
 - Multiple configuration levels
 - Resource dependencies
 - Default values and conventions
@@ -97,6 +98,7 @@ Engagement strategy:
 2. Point out nested configuration
 3. Highlight dependency management
 -->
+
 ---
 layout: center
 hideInToc: true
@@ -116,7 +118,7 @@ var app = new ContainerApp("example-app", new ContainerAppArgs
             new ContainerArgs
             {
                 Name = "examplecontainer",
-                Image = "mcr.microsoft.com/azuredocs/containerapps-helloworld:latest",
+                Image = "mcr.microsoft.com/k8se/quickstart:latest",
                 Resources = ContainerResources.GetResources(cpuCount: 0.25, gibibytesOfMemory: 0.5)
             }
         }
@@ -202,16 +204,18 @@ How Pulumi organizes infrastructure code
 ::left::
 
 ## Project
-```yaml {all|2|3|4-5|all}
-name: container-app
-runtime: dotnet
-description: Base container app template
-```
 - Single unit of infrastructure code
 - Reusable template for environments
 - Shared implementation logic
 - Common patterns and structures
 - Version controlled as one repo
+
+```yaml {all|2|3|4-5|all}
+# Pulumi.yaml
+name: container-app
+runtime: dotnet
+description: Base container app template
+```
 
 ::right::
 
@@ -267,20 +271,21 @@ hideInToc: true
 ```csharp {all|3-4|6-10|12-16|all}
 public class MyStack : Stack
 {
-    // Constructor gets config values
+    // Constructor is the point of entry
     public MyStack()
     {
         // Get stack-specific values
         var config = new Config();
-        var appName = config.Require("name");
-        var appSize = config.Require("size");
-        var location = config.Require("location");
+        var location = AzureLocation.FromId(config.Require("location"));
+        var resourceGroup = AzureResourceGroup.Create($"mews-pulumi-example-{location.Abbreviation}-tmp", location);
 
-        // Create resources using config
-        var app = new WebApplication(appName)
-            .InResourceGroup(resourceGroup)
-            .WithSize(appSize)
-            .InLocation(location);
+        // Create resources
+        var containerAppEnvironment = AzureContainerAppEnvironment.Create(
+            name: $"pulumi-example-cae--{location.Abbreviation}",
+            location: location,
+            resourceGroup: resourceGroup,
+            logDestination: new AzureMonitorDestination()
+        );
     }
 }
 ```
@@ -388,19 +393,34 @@ How Pulumi tracks your infrastructure
 ## State Example
 ```json {all|2-3|4-8|9-12|all}
 {
-  "version": 3,
-  "deployment": {
-    "resources": [
-      {
-        "type": "azure:core/resourceGroup:ResourceGroup", // probably wrong, fix it
-        "name": "rg-demo"
-      },
-      "outputs": {
-        "resourceGroupName": "rg-demo",
-        "location": "westeurope"
-      }
-    ]
-  }
+   "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2024-11-07T10:20:28.011938947Z",
+            "magic": "668ca25d7f85ccc6ac87bbb638bb84f209eef6d0a451c1879fb6018ee75ce8ea",
+            "version": "v3.137.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+              // References to service providing secrets encryption
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:uuid",
+                "custom": true,
+                "id": "/subscriptions/*/resourceGroups/*/providers/Microsoft.App/managedEnvironments/example",
+                "type": "azure-native:app/v20230501:ManagedEnvironment",
+                "outputs": {
+                    // Values returned by Azure API for the resource
+                },
+                "parent": "urn:Stack*",
+                "external": true,
+                "provider": "urn:providers:azure-native::default_2_67_0",
+                "modified": "2024-11-07T10:20:26.655567354Z"
+            },
+            // More resources
 }
 ```
 
@@ -494,43 +514,6 @@ Questions to ask:
 - "How would you refresh the state?"
 -->
 ---
-hideInToc: true
----
-
-# Language Benefits
-
-## Using C# for Infrastructure
-<v-clicks>
-
-- Strong Type System
-- IDE Support
-- Refactoring Tools
-- Testing Framework
-- Dependency Management
-- Package Ecosystem
-
-</v-clicks>
-
-## Real Development Features
-<v-clicks>
-
-- Classes and Inheritance
-- Error Handling
-- Code Organization
-- Documentation Tools
-- Code Sharing
-- Team Collaboration
-
-</v-clicks>
-
-<!--
-# Presenter Notes
-- Show IDE benefits later in demo
-- Highlight productivity gains
-- Compare to YAML/HCL limitations
--->
-
----
 layout: center
 hideInToc: true
 ---
@@ -568,16 +551,6 @@ flowchart TB
     Azure --> AzureCloud
     AWS --> AWSCloud
     K8s --> K8sCloud
-
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
-    classDef cloud fill:#e4f0ee,stroke:#333;
-    classDef engine fill:#dae8fc,stroke:#333;
-    classDef providers fill:#d5e8d4,stroke:#333;
-    
-    class IDE default;
-    class Cloud cloud;
-    class Pulumi engine;
-    class Providers providers;
 ```
 
 <!--
@@ -688,4 +661,3 @@ Questions to ask:
 - "How would rollback work?"
 - "What happens if remote call fails?"
 -->
----

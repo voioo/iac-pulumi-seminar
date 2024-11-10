@@ -31,7 +31,6 @@ flowchart TD
     A[Infrastructure Code] -->|Real-time| B[Digital Twin]
     B -->|Instant Feedback| A
     B -->|Reflects| C[Real Infrastructure]
-    style B fill:#f9f,stroke:#333
 ```
 
 ::right::
@@ -101,7 +100,6 @@ graph TB
         C1 --> D1[Apply]
         D1 --> E1[Verify]
     end
-    style Current fill:#ffcccc
 ```    
 ```mermaid {scale: 0.8}
 graph TB    
@@ -111,7 +109,6 @@ graph TB
         B2 --> C2[Auto-validate]
         C2 --> D2[Live Preview]
     end
-    style Future fill:#90EE90
 ```
 
 <!--

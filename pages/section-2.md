@@ -24,6 +24,39 @@ layout: center
 hideInToc: true
 ---
 
+# The Modern Challenge of Growth
+
+## Startup Team Reality
+<v-clicks>
+
+- Small team (3 developers)
+- Promising app with database and API
+- Multiple environments needed
+- Manual Azure setup initially
+- Growing pains emerging
+
+</v-clicks>
+
+<!--
+# Presenter Notes
+- Introduce real-world scenario
+- Connect to their experiences
+- Set up for infrastructure solutions
+- Bridge to next section
+
+## Key Challenges
+- Configuration consistency
+- Environment parity
+- Documentation
+- Team coordination
+- Scaling operations
+-->
+
+---
+layout: center
+hideInToc: true
+---
+
 # Two Ways to Create Infrastructure
 
 <div class="flex justify-center gap-16">
@@ -91,9 +124,14 @@ hideInToc: true
 - Tribal knowledge
 - Configuration drift
 
+<div v-click class="mt-12 text-center text-xl">
+So how can we do this better?
+</div>
+
 </v-clicks>
 ---
 layout: two-cols-header
+hideInToc: true
 ---
 
 # Core IaC Principles
@@ -113,16 +151,6 @@ Infrastructure managed with the same rigor as application code
 
 </div>
 
-<div v-click>
-
-## Declarative Definitions
-- Describe desired state
-- System handles "how"
-- Predictable results
-- Self-documenting
-
-</div>
-
 ::right::
 
 <div v-click>
@@ -132,16 +160,6 @@ Infrastructure managed with the same rigor as application code
 - Consistent results
 - Reduced human error
 - Scalable operations
-
-</div>
-
-<div v-click>
-
-## Immutable Infrastructure
-- No manual changes
-- Replace vs modify
-- Versioned states
-- Easy rollbacks
 
 </div>
 
@@ -159,6 +177,38 @@ Ask about principles:
 - "Which might be challenging?"
 - "Used any of these in projects?"
 -->
+
+---
+layout: two-cols-header
+hideInToc: true
+---
+
+# Core IaC Principles #2
+
+::left::
+
+<div v-click>
+
+## Declarative Definitions
+- Describe desired state
+- System handles "how"
+- Predictable results
+- Self-documenting
+
+</div>
+
+::right::
+
+<div v-click>
+
+## Immutable Infrastructure
+- No manual changes
+- Replace vs modify
+- Versioned states
+- Easy rollbacks
+
+</div>
+
 ---
 layout: two-cols-header
 hideInToc: true
@@ -186,9 +236,9 @@ Different tools for different infrastructure needs
 
 ## Specialized Tools
 - Ansible - Configuration
+- Chef - VM management
 - Kubernetes - Containers
 - Helm - K8s packages
-- CDK - Cloud Development
 
 </div>
 
@@ -352,99 +402,4 @@ Key points:
 
 Demo teaser:
 - "We'll see this in action soon"
--->
----
-layout: two-cols-header
-hideInToc: true
----
-
-# Benefits & Challenges
-
-Making the transition to Infrastructure as Code
-
-::left::
-
-# Benefits
-
-<div class="space-y-4">
-  <div v-click class="benefit">
-    Version Control
-  </div>
-  
-  <div v-click class="benefit">
-    Familiar Dev Experience
-  </div>
-  
-  <div v-click class="benefit">
-    Repeatability
-  </div>
-  
-  <div v-click class="benefit">
-    Self-Documenting
-  </div>
-  
-  <div v-click class="benefit">
-    Team Collaboration
-  </div>
-</div>
-
-::right::
-
-# Challenges
-
-<div class="space-y-4">
-  <div v-click class="challenge">
-    Learning Curve
-  </div>
-  
-  <div v-click class="challenge">
-    Initial Setup
-  </div>
-  
-  <div v-click class="challenge">
-    Team Adoption
-  </div>
-  
-  <div v-click class="challenge">
-    State Management
-  </div>
-  
-  <div v-click class="challenge">
-    Legacy Integration
-  </div>
-</div>
-
-<style>
-.benefit, .challenge {
-  @apply p-2 rounded;
-}
-.benefit {
-  @apply bg-green-500 bg-opacity-10;
-}
-.challenge {
-  @apply bg-orange-500 bg-opacity-10;
-}
-</style>
-
-<!--
-# Speaker Notes
-
-Start with benefits:
-- Each one connects to their dev experience
-- Give quick examples for each
-- Point out long-term gains
-
-Then challenges:
-- Be honest about difficulties
-- Not appripriate at every scale
-- But show they're manageable
-- Most are one-time costs
-- Common to all new tech adoption
-
-Key message:
-"Benefits compound over time, challenges decrease"
-
-Ask:
-"Which benefit interests you most?"
-"Which challenge concerns you?"
 -->

@@ -11,10 +11,9 @@ Two parallel revolutions that shaped modern computing
 
 <!--
 # Speaker Notes
-- We'll look at two parallel stories
-- Both happened in the last 20 years
-- The both lead to increase of complexity in our systems and our infrastructure
-- Think about connections between them
+- Little bit of history to explain where IaC comes from
+- Two main trends in the last 20 years
+- They both lead to increase of complexity in our infrastructure
 -->
 
 ---
@@ -48,9 +47,8 @@ timeline
 <!--
 # Speaker Notes
 - Start with simple timeline view
-- Emphasize the progression of speed
+- Emphasize the progression of speed and the introduction of on-demand scaling
 - Point out key technology shifts
-- Set up for detailed metrics
 -->
 
 ---
@@ -139,11 +137,12 @@ timeline
         Cloud Native : Microservices
         : Distributed Data
         : Container Deploy
+        : Kubernetes
     section 2020s
         Modern : Serverless & Containers
         : Many services, many databases
         : Multi-cloud
-        : Many Deployments
+        : Continuous Deployments
 ```
 
 <!--
@@ -179,9 +178,9 @@ hideInToc: true
 # Speaker Notes
 
 Expand on each point:
-- Monolithic: Like your early web projects - simple LAMP stack
+- Monolithic: Like your early one person projects - simple stack
 - SOA: Teams start interfering with each other, need coordination
-- Cloud Native: Kubernetes orchestration becomes common
+- Cloud Native: Kubernetes entered the scene and more complex automated orchestration becomes accesible
 - Modern: Mix of approaches based on needs
 
 Additional context to mention:
@@ -194,6 +193,7 @@ Key message: Infrastructure complexity follows system complexity - this is why w
 
 Question to ask: "What architectures have you seen and worked with?"
 -->
+
 ---
 layout: center
 hideInToc: true
@@ -271,36 +271,3 @@ Look for:
 - Tools they're familiar with
 - Which concepts need more explanation
 -->
-
----
-hideInToc: true
----
-
-# The Modern Challenge
-
-## Startup Team Reality
-<v-clicks>
-
-- Small team (3 developers)
-- Promising app with database and API
-- Multiple environments needed
-- Manual Azure setup initially
-- Growing pains emerging
-
-## Key Challenges
-- Configuration consistency
-- Environment parity
-- Documentation
-- Team coordination
-- Scaling operations
-
-</v-clicks>
-
-<!--
-# Presenter Notes
-- Introduce real-world scenario
-- Connect to their experiences
-- Set up for infrastructure solutions
-- Bridge to next section
--->
----

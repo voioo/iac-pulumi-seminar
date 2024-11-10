@@ -10,35 +10,25 @@ Build reusable patterns at scale
 </div>
 
 ---
-layout: two-cols-header
+layout: center
 hideInToc: true
 ---
 
 # Infrastructure Delivery Evolution
 From weeks to minutes, from process to platform
 
-::left::
-
 ## Traditional Approach
-```mermaid {scale: 0.6}
+```mermaid {scale: 0.8}
 flowchart LR
     A[Team] -->|Request| B[Wait...]
     B -->|Weeks| C[Infrastructure]
-    style A fill:#b3e0ff
-    style B fill:#ffcccc
-    style C fill:#b3e0ff
 ```
 
-::right::
-
 ## Platform Approach
-```mermaid {scale: 0.6}
+```mermaid {scale: 0.8}
 flowchart LR
     A[Team] -->|Self-Service| B[Platform]
     B -->|Minutes| C[Infrastructure]
-    style A fill:#b3e0ff
-    style B fill:#90EE90
-    style C fill:#b3e0ff
 ```
 
 <!--
@@ -201,12 +191,6 @@ flowchart TD
     S2 --> T
     S3 --> T
     T --> A[Applications]
-    style P fill:#f9f,stroke:#333
-    style T fill:#bbf,stroke:#333
-    style S1 fill:#90EE90,stroke:#333
-    style S2 fill:#90EE90,stroke:#333
-    style S3 fill:#90EE90,stroke:#333
-
 ```
 
 <!--
@@ -515,7 +499,7 @@ layout: center
 hideInToc: true
 ---
 
-# Why Platform Worked
+# Why Platforms Work
 
 ```mermaid {scale: 0.7}
 graph TD
@@ -523,8 +507,6 @@ graph TD
     B[Automation] -->|Enables| D
     C[Self-Service] -->|Enables| D
     D -->|Results in| E[Fast Delivery]
-    style D fill:#bbf,stroke:#333
-    style E fill:#90EE90,stroke:#333
 ```
 
 <!--
@@ -586,9 +568,6 @@ hideInToc: true
 flowchart LR
     A[Raw Pulumi] -->|Abstract| B[Low-Level SDK]
     B -->|Simplify| C[High-Level SDK]
-    style A fill:#ffcccc
-    style B fill:#b3e0ff
-    style C fill:#90EE90
 ```
 
 <!--
@@ -776,8 +755,11 @@ hideInToc: true
 - Team autonomy with guardrails
 - Balance abstraction and control
 - Built-in best practices
+- Clear defaults with overrides
 
 </div>
+
+::right::
 
 <div v-click>
 
@@ -787,32 +769,9 @@ hideInToc: true
 - IDE support (completion, docs)
 - Clear error messages
 - Fast feedback loops
-
-</div>
-
-::right::
-
-<div v-click>
-
-## Implementation Focus
-- Clear defaults with overrides
-- Security by default
-- Built-in cost controls
-- Resource relationships
-- Standard naming conventions
-
-</div>
-
-<div v-click>
-
-## Team Enablement
 - Self-service deployment
-- Clear ownership model
-- Configuration injection
-- Common patterns
-- Easy onboarding
-
 </div>
+
 
 <!--
 # Speaker Notes

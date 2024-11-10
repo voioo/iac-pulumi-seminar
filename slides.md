@@ -27,9 +27,10 @@ Michal Bajer | Mews | 2024
 
 <!--
 # Presenter Notes
-- Personal intro - mention experience with infrastructure automation
-- Brief background connecting theory and practice
-- Set expectation: we'll use their CS knowledge in new context
+- Personal intro
+- Brief background a Mews
+- Mention some context about Mews and experience with infrastructure automation
+- Set expectation: demo of Pulumi later
 -->
 
 ---
@@ -43,10 +44,7 @@ hideInToc: true
 
 <!--
 # Presenter Notes
-- Emphasize how theory meets practice
-- Note points where CS background particularly relevant
-- Preview hands-on components
-- Mention dealing with growing complexity
+- Briefly introduce each section
 -->
 
 ---
