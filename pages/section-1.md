@@ -22,6 +22,8 @@ hideInToc: true
 ---
 
 # Infrastructure Evolution Timeline
+Major shifts in how we manage infrastructure over decades
+
 
 ```mermaid
 timeline
@@ -57,6 +59,7 @@ hideInToc: true
 ---
 
 # Infrastructure Evolution Metrics
+Quantifying the impact of infrastructure transformation
 
 <table class="metrics-table">
   <thead>
@@ -121,6 +124,7 @@ hideInToc: true
 ---
 
 # Systems Architecture Evolution
+How software systems grew in complexity and scale
 
 ```mermaid
 timeline
@@ -200,6 +204,7 @@ hideInToc: true
 ---
 
 # The Pets vs Cattle Revolution
+A fundamental shift in infrastructure mindset
 
 <div class="flex items-center justify-center gap-8">
   <div v-click class="text-center">
@@ -256,6 +261,12 @@ hideInToc: true
     Which cloud providers?
   </div>
 </div>
+
+<style>
+.question {
+  @apply p-4 rounded bg-blue-500 bg-opacity-10 cursor-pointer hover:bg-opacity-20 transition-all;
+}
+</style>
 
 <!--
 # Speaker Notes

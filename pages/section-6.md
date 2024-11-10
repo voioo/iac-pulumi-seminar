@@ -22,12 +22,12 @@ hideInToc: true
 ---
 
 # System Initiative Approach
-Reimagining Infrastructure as Digital Twins
+Digital twins for infrastructure management
 
 ::left::
 
 ```mermaid {scale: 0.7}
-flowchart TD
+flowchart TB
     A[Infrastructure Code] -->|Real-time| B[Digital Twin]
     B -->|Instant Feedback| A
     B -->|Reflects| C[Real Infrastructure]
@@ -35,17 +35,32 @@ flowchart TD
 
 ::right::
 
-## Key Concepts
-
-<div v-click>
-
-- 1:1 resource mapping
-- Real-time state tracking
-- Instant validation
-- Live collaboration
-- Visual feedback
-
+<div v-click class="concept-box">
+  <div class="text-xl mb-2">🔄 Key Features</div>
+  <ul class="text-sm">
+    <li>1:1 resource mapping</li>
+    <li>Real-time state tracking</li>
+    <li>Instant validation</li>
+    <li>Live collaboration</li>
+    <li>Visual feedback</li>
+  </ul>
 </div>
+
+<div v-click class="concept-box mt-4">
+  <div class="text-xl mb-2">💡 Benefits</div>
+  <ul class="text-sm">
+    <li>Immediate feedback loop</li>
+    <li>Error prevention</li>
+    <li>Team coordination</li>
+    <li>Visual understanding</li>
+  </ul>
+</div>
+
+<style>
+.concept-box {
+  @apply p-4 rounded bg-blue-500 bg-opacity-10;
+}
+</style>
 
 <!--
 # Speaker Notes
@@ -90,26 +105,68 @@ layout: center
 hideInToc: true
 ---
 
-# Current vs Future
+# Current vs Future Workflow
+Evolution of infrastructure management approaches
 
-```mermaid {scale: 0.8}
-graph TB
+```mermaid {scale: 0.7}
+flowchart TB
     subgraph Current ["Current Approach"]
         A1[Write Code] --> B1[Plan]
         B1 --> C1[Review]
         C1 --> D1[Apply]
         D1 --> E1[Verify]
     end
-```    
-```mermaid {scale: 0.8}
-graph TB    
-    subgraph Future ["System Initiative"]
+```
+
+```mermaid {scale: 0.7}
+flowchart TB
+    subgraph Future ["Future Approach"]
         A2[Edit Infrastructure] --> B2[Instant Feedback]
         B2 --> A2
         B2 --> C2[Auto-validate]
         C2 --> D2[Live Preview]
     end
 ```
+
+<div class="grid grid-cols-2 gap-12 mt-8">
+  <div v-click class="workflow-box red-tint">
+    <div class="text-xl mb-2">Current Process</div>
+    <div class="text-sm">
+      <div class="mb-2 font-bold">Characteristics</div>
+      <ul>
+        <li>Sequential steps</li>
+        <li>Manual validation</li>
+        <li>Delayed feedback</li>
+        <li>Complex coordination</li>
+      </ul>
+    </div>
+  </div>
+
+  <div v-click class="workflow-box green-tint">
+    <div class="text-xl mb-2">Future Process</div>
+    <div class="text-sm">
+      <div class="mb-2 font-bold">Characteristics</div>
+      <ul>
+        <li>Continuous feedback</li>
+        <li>Automated validation</li>
+        <li>Real-time preview</li>
+        <li>Team awareness</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+.workflow-box {
+  @apply p-6 rounded;
+}
+.red-tint {
+  @apply bg-red-500 bg-opacity-10;
+}
+.green-tint {
+  @apply bg-green-500 bg-opacity-10;
+}
+</style>
 
 <!--
 # Speaker Notes

@@ -10,20 +10,48 @@ Using pulumi to manage cloud environment
 </div>
 
 ---
+layout: center
 hideInToc: true
 ---
 
 # Basic Infrastructure Implementation
+Building blocks of our demo environment
 
-## What We'll Build
-<v-clicks>
+<div class="flex justify-center gap-12">
+  <div v-click class="resource-group">
+    <div class="text-4xl mb-2">🏢</div>
+    <div class="text-xl">Resource Group</div>
+    <div class="text-sm opacity-75">Logical container</div>
+  </div>
 
-- Resource Group
-- SQL Server and Database
-- Container App Environment
-- Container App
+  <div v-click class="resource-group">
+    <div class="text-4xl mb-2">💾</div>
+    <div class="text-xl">SQL Sever and Database</div>
+    <div class="text-sm opacity-75">Data storage</div>
+  </div>
 
-</v-clicks>
+  <div v-click class="resource-group">
+    <div class="text-4xl mb-2">🎯</div>
+    <div class="text-xl">Container App and Environment</div>
+    <div class="text-sm opacity-75">Application runtime</div>
+  </div>
+</div>
+
+<div v-click class="mt-12 text-center">
+  <div class="text-sm opacity-75">Dependencies flow</div>
+```mermaid {scale: 0.7}
+graph LR
+  A[Resource Group] --> B[SQL Server]
+  A --> C[Container App]
+  B -.-> C
+```
+</div>
+
+<style>
+.resource-group {
+  @apply text-center p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
 
 <!--
 # Presenter Notes
@@ -258,30 +286,49 @@ hideInToc: true
 -->
 
 ---
+layout: two-cols-header
 hideInToc: true
 ---
 
 # Preview Limitations
+Understanding what preview can and cannot catch
 
-## What Preview Shows
-<v-clicks>
+::left::
 
-- Resource Changes
-- Configuration Updates
-- Dependencies
-- Basic Validation
+<div v-click class="preview-box">
+  <div class="text-xl mb-2">✅ What Preview Shows</div>
+  <ul class="text-sm">
+    <li>Resource additions/removals</li>
+    <li>Property changes</li>
+    <li>Basic validation</li>
+    <li>Dependencies</li>
+  </ul>
+</div>
 
-</v-clicks>
+::right::
 
-## What Preview Misses
-<v-clicks>
+<div v-click class="preview-box">
+  <div class="text-xl mb-2">⚠️ What Preview Misses</div>
+  <ul class="text-sm">
+    <li>API-specific rules</li>
+    <li>Some validation rules</li>
+    <li>Runtime conditions</li>
+    <li>External dependencies</li>
+  </ul>
+</div>
 
-- API-Specific Rules
-- Some Validation Rules
-- Runtime Conditions
-- External Dependencies
+<div v-click class="mt-8 mx-4 p-4 rounded bg-blue-500 bg-opacity-10">
+  <div class="text-center font-bold">Best Practice</div>
+  <div class="text-sm text-center mt-2">
+    Always test changes in development environment first
+  </div>
+</div>
 
-</v-clicks>
+<style>
+.preview-box {
+  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
 
 <!--
 # Presenter Notes
@@ -292,36 +339,56 @@ hideInToc: true
 -->
 
 ---
+layout: center
 hideInToc: true
 ---
 
-# Team Workflow Demo
+# Team Workflow
+Collaborative infrastructure management
 
-## Pull Request Process
-<v-clicks>
+```mermaid {scale: 0.8}
+flowchart LR
+    A[Branch] --> B[Changes]
+    B --> C[Preview]
+    C --> D[PR]
+    subgraph Review
+        D --> E[Code Review]
+        E --> F[Plan Review]
+    end
+    Review --> G[Merge]
+    G --> H[Deploy]
+```
 
-1. Create Branch
-2. Make Changes
-3. Run Preview
-4. Create PR
-5. Review Changes
-6. Merge & Deploy
+<div class="grid grid-cols-2 gap-8 mt-8">
+  <div v-click class="review-point">
+    <div class="text-xl mb-2">👥 Review Points</div>
+    <ul class="text-sm">
+      <li>Code quality</li>
+      <li>Security checks</li>
+      <li>Cost impact</li>
+      <li>Best practices</li>
+    </ul>
+  </div>
 
-</v-clicks>
+  <div v-click class="review-point">
+    <div class="text-xl mb-2">🔍 Validation</div>
+    <ul class="text-sm">
+      <li>Automated tests</li>
+      <li>Policy checks</li>
+      <li>Preview results</li>
+      <li>Change scope</li>
+    </ul>
+  </div>
+</div>
 
-## Review Points
-<v-clicks>
-
-- Code Quality
-- Security Checks
-- Cost Impact
-- Best Practices
-- Team Standards
-
-</v-clicks>
+<style>
+.review-point {
+  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
 
 <!--
-# Presenter Notes
+# Speaker Notes
 - Show real PR example
 - Discuss review process
 - Highlight automation
@@ -334,70 +401,44 @@ hideInToc: true
 ---
 
 # Benefits & Challenges
-
 Making the transition to Infrastructure as Code
 
 ::left::
 
-# Benefits
-
 <div class="space-y-4">
   <div v-click class="benefit">
-    Version Control
-  </div>
-  
-  <div v-click class="benefit">
-    Familiar Dev Experience
-  </div>
-  
-  <div v-click class="benefit">
-    Repeatability
-  </div>
-  
-  <div v-click class="benefit">
-    Self-Documenting
-  </div>
-  
-  <div v-click class="benefit">
-    Team Collaboration
+    <div class="text-xl mb-2">🎯 Benefits</div>
+    <ul class="text-sm">
+      <li>Version Control</li>
+      <li>Familiar Dev Experience</li>
+      <li>Repeatability</li>
+      <li>Self-Documenting</li>
+      <li>Team Collaboration</li>
+    </ul>
   </div>
 </div>
 
 ::right::
 
-# Challenges
-
 <div class="space-y-4">
   <div v-click class="challenge">
-    Learning Curve
-  </div>
-  
-  <div v-click class="challenge">
-    Initial Setup
-  </div>
-  
-  <div v-click class="challenge">
-    Team Adoption
-  </div>
-  
-  <div v-click class="challenge">
-    State Management
-  </div>
-  
-  <div v-click class="challenge">
-    Legacy Integration
+    <div class="text-xl mb-2">💪 Challenges</div>
+    <ul class="text-sm">
+      <li>Learning Curve</li>
+      <li>Initial Setup</li>
+      <li>Team Adoption</li>
+      <li>State Management</li>
+      <li>Legacy Integration</li>
+    </ul>
   </div>
 </div>
 
 <style>
-.benefit, .challenge {
-  @apply p-2 rounded;
-}
 .benefit {
-  @apply bg-green-500 bg-opacity-10;
+  @apply p-4 rounded bg-green-500 bg-opacity-10;
 }
 .challenge {
-  @apply bg-orange-500 bg-opacity-10;
+  @apply p-4 rounded bg-orange-500 bg-opacity-10;
 }
 </style>
 
@@ -425,38 +466,51 @@ Ask:
 -->
 
 ---
+layout: two-cols-header
 hideInToc: true
 ---
 
 # Language Benefits
+Using C# for Infrastructure Management
 
-## Using C# for Infrastructure
-<v-clicks>
+::left::
 
-- Strong Type System
-- IDE Support
-- Refactoring Tools
-- Testing Framework
-- Dependency Management
-- Package Ecosystem
+<div class="space-y-4">
+  <div v-click class="benefit">
+    <div class="text-xl mb-2">🛠️ Development Features</div>
+    <ul class="text-sm">
+      <li>Strong Type System</li>
+      <li>IDE Support</li>
+      <li>Refactoring Tools</li>
+      <li>Testing Framework</li>
+      <li>Package Ecosystem</li>
+    </ul>
+  </div>
+</div>
 
-</v-clicks>
+::right::
 
-## Real Development Features
-<v-clicks>
+<div class="space-y-4">
+  <div v-click class="benefit">
+    <div class="text-xl mb-2">📚 Code Organization</div>
+    <ul class="text-sm">
+      <li>Classes and Inheritance</li>
+      <li>Error Handling</li>
+      <li>Documentation Tools</li>
+      <li>Code Sharing</li>
+      <li>Team Collaboration</li>
+    </ul>
+  </div>
+</div>
 
-- Classes and Inheritance
-- Error Handling
-- Code Organization
-- Documentation Tools
-- Code Sharing
-- Team Collaboration
-
-</v-clicks>
+<style>
+.benefit {
+  @apply p-4 rounded bg-green-500 bg-opacity-10;
+}
+</style>
 
 <!--
-# Presenter Notes
-- Show IDE benefits later in demo
+# Speaker Notes
 - Highlight productivity gains
 - Compare to YAML/HCL limitations
 -->

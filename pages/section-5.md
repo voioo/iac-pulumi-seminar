@@ -80,14 +80,15 @@ layout: two-cols-header
 hideInToc: true
 ---
 
-# Key Platform Challenges
+# Key Challenges
+Understanding common scaling issues
 
 ::left::
 
 <div class="space-y-4">
   <div v-click class="challenge-box">
     <div class="text-xl mb-2">🕒 Speed & Scale</div>
-    <ul class="ml-4">
+    <ul class="text-sm">
       <li>Teams waiting weeks</li>
       <li>Manual bottlenecks</li>
       <li>Limited resources</li>
@@ -96,7 +97,7 @@ hideInToc: true
   
   <div v-click class="challenge-box">
     <div class="text-xl mb-2">🔄 Consistency</div>
-    <ul class="ml-4">
+    <ul class="text-sm">
       <li>Environment drift</li>
       <li>Configuration variance</li>
       <li>Undocumented changes</li>
@@ -109,7 +110,7 @@ hideInToc: true
 <div class="space-y-4">
   <div v-click class="challenge-box">
     <div class="text-xl mb-2">🔒 Security & Control</div>
-    <ul class="ml-4">
+    <ul class="text-sm">
       <li>Review bottlenecks</li>
       <li>Access management</li>
       <li>Compliance needs</li>
@@ -118,7 +119,7 @@ hideInToc: true
   
   <div v-click class="challenge-box">
     <div class="text-xl mb-2">👥 Team Impact</div>
-    <ul class="ml-4">
+    <ul class="text-sm">
       <li>Delayed projects</li>
       <li>Reduced productivity</li>
       <li>Team frustration</li>
@@ -128,7 +129,7 @@ hideInToc: true
 
 <style>
 .challenge-box {
-  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+  @apply p-4 rounded bg-orange-500 bg-opacity-10;
 }
 </style>
 
@@ -175,23 +176,63 @@ Questions to Ask:
 - "How do these impact your development process?"
 - "Which would you prioritize solving?"
 -->
+
 ---
-layout: center
+layout: two-cols-header
 hideInToc: true
 ---
 
 # Internal Developer Platform
+Building blocks for team empowerment
 
-```mermaid {scale: 0.7}
-flowchart TD
-    P[Platform Layer] --> S1[Security]
-    P --> S2[Standards]
-    P --> S3[Services]
-    S1 --> T[Teams]
-    S2 --> T
-    S3 --> T
-    T --> A[Applications]
+::left::
+
+```mermaid {scale: 0.6}
+flowchart TB
+    subgraph Platform ["Platform Layer"]
+        direction TB
+        S1[Security] 
+        S2[Standards]
+        S3[Services]
+    end
+
+    subgraph Teams ["Development Teams"]
+        direction TB
+        T1[Team 1]
+        T2[Team 2]
+        T3[Team 3]
+    end
+
+    Platform --> Teams
+    Teams --> A[Applications]
+
 ```
+
+::right::
+
+
+<div class="grid grid-cols-3 gap-8 mt-8">
+  <div v-click class="platform-box">
+    <div class="text-xl mb-2">🔒 Security</div>
+    <div class="text-sm">Built-in compliance and access controls</div>
+  </div>
+
+  <div v-click class="platform-box">
+    <div class="text-xl mb-2">📋 Standards</div>
+    <div class="text-sm">Best practices and guardrails</div>
+  </div>
+
+  <div v-click class="platform-box">
+    <div class="text-xl mb-2">🔧 Services</div>
+    <div class="text-sm">Shared components and tools</div>
+  </div>
+</div>
+
+<style>
+.platform-box {
+  @apply p-4 rounded bg-blue-500 bg-opacity-10 text-center;
+}
+</style>
 
 <!--
 # Speaker Notes
@@ -245,42 +286,41 @@ hideInToc: true
 ---
 
 # Platform Benefits
+Empowering teams while maintaining control
 
 ::left::
 
-## For Development Teams
-
-<div v-click>
-<div class="benefits-box">
-
-- Self-service infrastructure
-- Quick provisioning
-- Standard patterns
-- Clear documentation
-- Focus on code
-
-</div>
+<div class="space-y-4">
+  <div v-click class="benefit-box">
+    <div class="text-xl mb-2">👩‍💻 For Development Teams</div>
+    <ul class="text-sm">
+      <li>Self-service infrastructure</li>
+      <li>Quick provisioning</li>
+      <li>Standard patterns</li>
+      <li>Clear documentation</li>
+      <li>Focus on code</li>
+    </ul>
+  </div>
 </div>
 
 ::right::
 
-## For Platform Teams
-
-<div v-click>
-<div class="benefits-box">
-
-- Controlled scaling
-- Security enforcement
-- Resource optimization
-- Easier maintenance
-- Happy developers
-
-</div>
+<div class="space-y-4">
+  <div v-click class="benefit-box">
+    <div class="text-xl mb-2">🏗️ For Platform Teams</div>
+    <ul class="text-sm">
+      <li>Controlled scaling</li>
+      <li>Security enforcement</li>
+      <li>Resource optimization</li>
+      <li>Easier maintenance</li>
+      <li>Happy developers</li>
+    </ul>
+  </div>
 </div>
 
 <style>
-.benefits-box {
-  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+.benefit-box {
+  @apply p-4 rounded bg-green-500 bg-opacity-10;
 }
 </style>
 
@@ -340,7 +380,7 @@ hideInToc: true
 
 # The Mews Journey
 
-```mermaid {scale: 0.7}
+```mermaid {scale: 0.6}
 timeline
     title Infrastructure Evolution
     section 2018 - Monolith
@@ -416,40 +456,45 @@ hideInToc: true
 ---
 
 # Before and After
+Transformation of infrastructure management
 
 ::left::
 
-## Monolith Era
-
-<div v-click class="phase-box">
-
-- Single deployment unit
-- All changes affect everyone
-- One database for all
-- Central management
-- Deployment queues
-- Limited team autonomy
-
+<div v-click class="phase-box red-tint">
+  <div class="text-xl mb-2">⚡ Monolith Era</div>
+  <ul class="text-sm">
+    <li>Single deployment unit</li>
+    <li>All changes affect everyone</li>
+    <li>One database for all</li>
+    <li>Central management</li>
+    <li>Deployment queues</li>
+    <li>Limited team autonomy</li>
+  </ul>
 </div>
 
 ::right::
 
-## Service Era
-
-<div v-click class="phase-box">
-
-- Independent services
-- Isolated changes
-- Team-owned databases
-- Self-service platform
-- Continuous deployment
-- "You build it, you run it"
-
+<div v-click class="phase-box green-tint">
+  <div class="text-xl mb-2">🚀 Service Era</div>
+  <ul class="text-sm">
+    <li>Independent services</li>
+    <li>Isolated changes</li>
+    <li>Team-owned databases</li>
+    <li>Self-service platform</li>
+    <li>Continuous deployment</li>
+    <li>"You build it, you run it"</li>
+  </ul>
 </div>
 
 <style>
 .phase-box {
-  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+  @apply p-4 rounded;
+}
+.red-tint {
+  @apply bg-red-500 bg-opacity-10;
+}
+.green-tint {
+  @apply bg-green-500 bg-opacity-10;
 }
 </style>
 
@@ -500,14 +545,42 @@ hideInToc: true
 ---
 
 # Why Platforms Work
+Key principles of successful infrastructure platforms
 
-```mermaid {scale: 0.7}
-graph TD
-    A[Clear Standards] -->|Enables| D[Team Freedom]
-    B[Automation] -->|Enables| D
-    C[Self-Service] -->|Enables| D
-    D -->|Results in| E[Fast Delivery]
-```
+<div class="grid grid-cols-3 gap-8 mt-8">
+  <div v-click class="principle-box">
+    <div class="text-xl mb-2">📋 Standards</div>
+    <ul class="text-sm">
+      <li>Clear best practices</li>
+      <li>Built-in guardrails</li>
+      <li>Common patterns</li>
+    </ul>
+  </div>
+
+  <div v-click class="principle-box">
+    <div class="text-xl mb-2">🤖 Automation</div>
+    <ul class="text-sm">
+      <li>Repeatable processes</li>
+      <li>Consistent results</li>
+      <li>Fast delivery</li>
+    </ul>
+  </div>
+
+  <div v-click class="principle-box">
+    <div class="text-xl mb-2">🔑 Self-Service</div>
+    <ul class="text-sm">
+      <li>Team independence</li>
+      <li>Quick access</li>
+      <li>Built-in compliance</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.principle-box {
+  @apply p-4 rounded bg-blue-500 bg-opacity-10;
+}
+</style>
 
 <!--
 # Speaker Notes
@@ -561,14 +634,51 @@ hideInToc: true
 ---
 
 # Evolution of Our Infrastructure SDK
+Building abstractions for developer experience
 
-<div class="text-sm opacity-75 mb-4">From raw Pulumi to developer-friendly abstractions</div>
+<div class="grid grid-cols-3 gap-8 mt-8">
+  <div v-click class="sdk-box">
+    <div class="text-xl mb-2">Raw Pulumi</div>
+    <div class="text-sm">
+      <div class="mb-2 font-bold">Characteristics</div>
+      <ul>
+        <li>Direct resource creation</li>
+        <li>Full flexibility</li>
+        <li>Complex configuration</li>
+      </ul>
+    </div>
+  </div>
 
-```mermaid {scale: 0.7}
-flowchart LR
-    A[Raw Pulumi] -->|Abstract| B[Low-Level SDK]
-    B -->|Simplify| C[High-Level SDK]
-```
+  <div v-click class="sdk-box">
+    <div class="text-xl mb-2">Low-Level SDK</div>
+    <div class="text-sm">
+      <div class="mb-2 font-bold">Improvements</div>
+      <ul>
+        <li>Better defaults</li>
+        <li>Type safety</li>
+        <li>Basic patterns</li>
+      </ul>
+    </div>
+  </div>
+
+  <div v-click class="sdk-box">
+    <div class="text-xl mb-2">High-Level SDK</div>
+    <div class="text-sm">
+      <div class="mb-2 font-bold">Benefits</div>
+      <ul>
+        <li>Best practices built-in</li>
+        <li>Common scenarios</li>
+        <li>Team standards</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+.sdk-box {
+  @apply p-4 rounded bg-blue-500 bg-opacity-10;
+}
+</style>
 
 <!--
 # Speaker Notes
@@ -744,33 +854,41 @@ hideInToc: true
 ---
 
 # Key Design Principles
+Building effective infrastructure abstractions
 
 ::left::
 
-<div v-click>
-
-## Core Principles
-- Make complexity manageable
-- Standard patterns by default
-- Team autonomy with guardrails
-- Balance abstraction and control
-- Built-in best practices
-- Clear defaults with overrides
-
+<div v-click class="principle-box">
+  <div class="text-xl mb-2">🎯 Core Principles</div>
+  <ul class="text-sm">
+    <li>Make complexity manageable</li>
+    <li>Standard patterns by default</li>
+    <li>Team autonomy with guardrails</li>
+    <li>Balance abstraction and control</li>
+    <li>Built-in best practices</li>
+    <li>Clear defaults with overrides</li>
+  </ul>
 </div>
 
 ::right::
 
-<div v-click>
-
-## Developer Experience
-- Familiar C# patterns
-- Strong type safety
-- IDE support (completion, docs)
-- Clear error messages
-- Fast feedback loops
-- Self-service deployment
+<div v-click class="principle-box">
+  <div class="text-xl mb-2">💻 Developer Experience</div>
+  <ul class="text-sm">
+    <li>Familiar C# patterns</li>
+    <li>Strong type safety</li>
+    <li>IDE support (completion, docs)</li>
+    <li>Clear error messages</li>
+    <li>Fast feedback loops</li>
+    <li>Self-service deployment</li>
+  </ul>
 </div>
+
+<style>
+.principle-box {
+  @apply p-4 rounded bg-blue-500 bg-opacity-10;
+}
+</style>
 
 
 <!--
@@ -834,32 +952,60 @@ Transition to Next Topic:
 -->
 
 ---
+layout: two-cols-header
 hideInToc: true
 ---
 
 # Current Challenges
+Ongoing areas of improvement and focus
 
-## Technical Challenges
-<v-clicks>
+::left::
 
-- Finding right abstraction level
-- Maintaining backwards compatibility
-- Growing complexity of SDK
-- Testing infrastructure code
-- Managing dependencies
+<div v-click class="challenge-box">
+  <div class="text-xl mb-2">🔧 Technical Challenges</div>
+  
+  <div class="mt-4">
+    <div class="mb-2 font-bold text-sm">Abstraction Balance</div>
+    <div class="text-sm opacity-75">Finding the right level between flexibility and simplicity</div>
+  </div>
+  
+  <div class="mt-4">
+    <div class="mb-2 font-bold text-sm">Backwards Compatibility</div>
+    <div class="text-sm opacity-75">Managing SDK evolution without breaking changes</div>
+  </div>
+  
+  <div class="mt-4">
+    <div class="mb-2 font-bold text-sm">Testing Infrastructure</div>
+    <div class="text-sm opacity-75">Effective testing strategies for infrastructure code</div>
+  </div>
+</div>
 
-</v-clicks>
+::right::
 
-## Team Challenges
-<v-clicks>
+<div v-click class="challenge-box">
+  <div class="text-xl mb-2">👥 Team Challenges</div>
+  
+  <div class="mt-4">
+    <div class="mb-2 font-bold text-sm">Adoption & Training</div>
+    <div class="text-sm opacity-75">Getting teams comfortable with infrastructure as code</div>
+  </div>
+  
+  <div class="mt-4">
+    <div class="mb-2 font-bold text-sm">Documentation</div>
+    <div class="text-sm opacity-75">Maintaining clear, up-to-date documentation</div>
+  </div>
+  
+  <div class="mt-4">
+    <div class="mb-2 font-bold text-sm">Cloud Evolution</div>
+    <div class="text-sm opacity-75">Keeping up with rapid cloud service changes</div>
+  </div>
+</div>
 
-- Adoption and training
-- Documentation needs
-- Balance of control
-- Supporting diverse needs
-- Keeping up with cloud changes
-
-</v-clicks>
+<style>
+.challenge-box {
+  @apply p-4 rounded bg-orange-500 bg-opacity-10;
+}
+</style>
 
 <!--
 # Presenter Notes

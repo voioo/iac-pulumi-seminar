@@ -198,18 +198,84 @@ hideInToc: true
 ---
 
 # Core Concepts
+Building blocks of Pulumi infrastructure
 
-How Pulumi organizes infrastructure code
+::left::
+
+<div class="space-y-4">
+  <div v-click class="concept-box">
+    <div class="text-xl mb-2">📦 Projects</div>
+    <ul class="text-sm">
+      <li>Single unit of infrastructure</li>
+      <li>Defines resources and patterns</li>
+      <li>Version controlled together</li>
+    </ul>
+  </div>
+
+  <div v-click class="concept-box">
+    <div class="text-xl mb-2">🔧 Resources</div>
+    <ul class="text-sm">
+      <li>Individual cloud components</li>
+      <li>Automatic dependency tracking</li>
+      <li>Lifecycle management</li>
+    </ul>
+  </div>
+</div>
+
+::right::
+
+<div class="space-y-4">
+  <div v-click class="concept-box">
+    <div class="text-xl mb-2">🏗️ Stacks</div>
+    <ul class="text-sm">
+      <li>Environment instances</li>
+      <li>Configuration values</li>
+      <li>Independent state</li>
+    </ul>
+  </div>
+
+  <div v-click class="concept-box">
+    <div class="text-xl mb-2">📊 State</div>
+    <ul class="text-sm">
+      <li>Resource tracking</li>
+      <li>Change detection</li>
+      <li>Team synchronization</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.concept-box {
+  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
+
+<!--
+# Speaker Notes
+Core building blocks:
+- Projects organize code
+- Resources represent infrastructure
+- Stacks manage environments
+- State tracks everything
+
+Key points:
+- Each concept builds on others
+- Clear separation of concerns
+- Familiar to developers
+-->
+
+---
+layout: two-cols-header
+hideInToc: true
+---
+
+# Core Concepts #2
+
+Examples of how Pulumi organizes infrastructure code
 
 ::left::
 
 ## Project
-- Single unit of infrastructure code
-- Reusable template for environments
-- Shared implementation logic
-- Common patterns and structures
-- Version controlled as one repo
-
 ```yaml {all|2|3|4-5|all}
 # Pulumi.yaml
 name: container-app
@@ -397,28 +463,17 @@ How Pulumi tracks your infrastructure
     "deployment": {
         "manifest": {
             "time": "2024-11-07T10:20:28.011938947Z",
-            "magic": "668ca25d7f85ccc6ac87bbb638bb84f209eef6d0a451c1879fb6018ee75ce8ea",
             "version": "v3.137.0"
-        },
-        "secrets_providers": {
-            "type": "service",
-            "state": {
-              // References to service providing secrets encryption
-            }
         },
         "resources": [
             {
                 "urn": "urn:pulumi:uuid",
                 "custom": true,
-                "id": "/subscriptions/*/resourceGroups/*/providers/Microsoft.App/managedEnvironments/example",
+                "id": "/subscriptions/*/resourceGroups/***/example",
                 "type": "azure-native:app/v20230501:ManagedEnvironment",
                 "outputs": {
                     // Values returned by Azure API for the resource
-                },
-                "parent": "urn:Stack*",
-                "external": true,
-                "provider": "urn:providers:azure-native::default_2_67_0",
-                "modified": "2024-11-07T10:20:26.655567354Z"
+                }
             },
             // More resources
 }
@@ -514,13 +569,16 @@ Questions to ask:
 - "How would you refresh the state?"
 -->
 ---
-layout: center
+layout: two-cols-header
 hideInToc: true
 ---
 
 # How Pulumi Works
+Understanding the orchestration of infrastructure changes
 
-```mermaid
+::left::
+
+```mermaid {scale: 0.5}
 flowchart TB
     subgraph IDE ["Development Environment"]
         Code["Infrastructure Code 
@@ -552,6 +610,31 @@ flowchart TB
     AWS --> AWSCloud
     K8s --> K8sCloud
 ```
+
+::right::
+
+<div class="mt-4 space-y-4">
+  <div v-click class="component-box">
+    <div class="text-xl mb-2">Language Host</div>
+    <div class="text-sm opacity-75">Executes your C# code and tracks resource declarations</div>
+  </div>
+
+  <div v-click class="component-box">
+    <div class="text-xl mb-2">Deployment Engine</div>
+    <div class="text-sm opacity-75">Orchestrates changes and manages state</div>
+  </div>
+
+  <div v-click class="component-box">
+    <div class="text-xl mb-2">Resource Providers</div>
+    <div class="text-sm opacity-75">Connect to cloud APIs and handle operations</div>
+  </div>
+</div>
+
+<style>
+.component-box {
+  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
 
 <!--
 # Speaker Notes
@@ -600,7 +683,7 @@ hideInToc: true
 
 # Architecture in Action
 
-```mermaid
+```mermaid {scale: 0.6}
 sequenceDiagram
     participant IDE as Your Code
     participant LH as Language Host

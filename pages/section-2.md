@@ -25,17 +25,33 @@ hideInToc: true
 ---
 
 # The Modern Challenge of Growth
+Building and scaling your first application
 
-## Startup Team Reality
-<v-clicks>
+<div class="flex gap-12">
+  <div v-click class="challenge-box">
+    <div class="text-xl mb-2">Initial Setup</div>
+    <ul>
+      <li>Small team (3 developers)</li>
+      <li>Promising app with database</li>
+      <li>Multiple environments needed</li>
+    </ul>
+  </div>
 
-- Small team (3 developers)
-- Promising app with database and API
-- Multiple environments needed
-- Manual Azure setup initially
-- Growing pains emerging
+  <div v-click class="challenge-box">
+    <div class="text-xl mb-2">Growing Pains</div>
+    <ul>
+      <li>Manual Azure setup</li>
+      <li>Configuration complexity</li>
+      <li>Team coordination needed</li>
+    </ul>
+  </div>
+</div>
 
-</v-clicks>
+<style>
+.challenge-box {
+  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
 
 <!--
 # Presenter Notes
@@ -43,13 +59,6 @@ hideInToc: true
 - Connect to their experiences
 - Set up for infrastructure solutions
 - Bridge to next section
-
-## Key Challenges
-- Configuration consistency
-- Environment parity
-- Documentation
-- Team coordination
-- Scaling operations
 -->
 
 ---
@@ -112,56 +121,83 @@ Manual processes don't scale with modern needs
 layout: center
 hideInToc: true
 ---
-# Issues with manual management
 
-<v-clicks>
+# Issues with Manual Management
+Why clicking doesn't scale
 
-- Scaling
-- Hard to replicate
-- No history tracking
-- Error-prone
-- Team coordination challenges
-- Tribal knowledge
-- Configuration drift
+<div class="grid grid-cols-2 gap-8 mt-8">
+  <div v-click class="issue-box">
+    <div class="text-xl mb-2">Process Issues</div>
+    <ul>
+      <li>Hard to replicate</li>
+      <li>No history tracking</li>
+      <li>Error-prone</li>
+    </ul>
+  </div>
 
-<div v-click class="mt-12 text-center text-xl">
-So how can we do this better?
+  <div v-click class="issue-box">
+    <div class="text-xl mb-2">Team Issues</div>
+    <ul>
+      <li>Team coordination challenges</li>
+      <li>Tribal knowledge</li>
+      <li>Configuration drift</li>
+    </ul>
+  </div>
 </div>
 
-</v-clicks>
+<div v-click class="mt-12 text-center text-xl bg-blue-500 bg-opacity-10 p-4 rounded">
+  So how can we do this better?
+</div>
+
+<style>
+.issue-box {
+  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
+
+---
+layout: two-cols-header
+hideInToc: true
+---
+
 ---
 layout: two-cols-header
 hideInToc: true
 ---
 
 # Core IaC Principles
-
 Infrastructure managed with the same rigor as application code
 
 ::left::
 
-<div v-click>
-
-## Infrastructure as Software
-- Version controlled
-- Code reviews
-- Testing enabled
-- Clear history
-- Team collaboration
-
+<div v-click class="principle-box">
+  <div class="text-xl mb-2">Infrastructure as Software</div>
+  <ul>
+    <li>Version controlled</li>
+    <li>Code reviews</li>
+    <li>Testing enabled</li>
+    <li>Clear history</li>
+    <li>Team collaboration</li>
+  </ul>
 </div>
 
 ::right::
 
-<div v-click>
-
-## Automation First
-- Repeatable processes
-- Consistent results
-- Reduced human error
-- Scalable operations
-
+<div v-click class="principle-box">
+  <div class="text-xl mb-2">Automation First</div>
+  <ul>
+    <li>Repeatable processes</li>
+    <li>Consistent results</li>
+    <li>Reduced human error</li>
+    <li>Scalable operations</li>
+  </ul>
 </div>
+
+<style>
+.principle-box {
+  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
 
 <!--
 # Speaker Notes
@@ -184,30 +220,37 @@ hideInToc: true
 ---
 
 # Core IaC Principles #2
+Declarative definitions and immutable infrastructure
 
 ::left::
 
-<div v-click>
-
-## Declarative Definitions
-- Describe desired state
-- System handles "how"
-- Predictable results
-- Self-documenting
-
+<div v-click class="principle-box">
+  <div class="text-xl mb-2">Declarative Definitions</div>
+  <ul>
+    <li>Describe desired state</li>
+    <li>System handles "how"</li>
+    <li>Predictable results</li>
+    <li>Self-documenting</li>
+  </ul>
 </div>
 
 ::right::
 
-<div v-click>
-
-## Immutable Infrastructure
-- No manual changes
-- Replace vs modify
-- Versioned states
-- Easy rollbacks
-
+<div v-click class="principle-box">
+  <div class="text-xl mb-2">Immutable Infrastructure</div>
+  <ul>
+    <li>No manual changes</li>
+    <li>Replace vs modify</li>
+    <li>Versioned states</li>
+    <li>Easy rollbacks</li>
+  </ul>
 </div>
+
+<style>
+.principle-box {
+  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
 
 ---
 layout: two-cols-header
@@ -215,32 +258,37 @@ hideInToc: true
 ---
 
 # IaC Tools Landscape
-
 Different tools for different infrastructure needs
 
 ::left::
 
-<div v-click>
-
-## General Purpose
-- Terraform - Multi-cloud
-- Pulumi - Multi-language
-- CloudFormation - AWS
-- ARM Templates - Azure
-
+<div v-click class="tool-box">
+  <div class="text-xl mb-2">General Purpose</div>
+  <ul>
+    <li><strong>Terraform</strong> - Multi-cloud</li>
+    <li><strong>Pulumi</strong> - Multi-language</li>
+    <li><strong>CloudFormation</strong> - AWS</li>
+    <li><strong>ARM Templates</strong> - Azure</li>
+  </ul>
 </div>
 
 ::right::
 
-<div v-click>
-
-## Specialized Tools
-- Ansible - Configuration
-- Chef - VM management
-- Kubernetes - Containers
-- Helm - K8s packages
-
+<div v-click class="tool-box">
+  <div class="text-xl mb-2">Specialized Tools</div>
+  <ul>
+    <li><strong>Ansible</strong> - Configuration</li>
+    <li><strong>Chef</strong> - VM management</li>
+    <li><strong>Kubernetes</strong> - Containers</li>
+    <li><strong>Helm</strong> - K8s packages</li>
+  </ul>
 </div>
+
+<style>
+.tool-box {
+  @apply p-4 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
 
 <!--
 # Speaker Notes
@@ -263,6 +311,7 @@ hideInToc: true
 ---
 
 # The Development Workflow
+From local development to deployment
 
 <div class="workflow">
   <div v-click class="step">
@@ -316,6 +365,15 @@ hideInToc: true
 
 <!--
 # Speaker Notes
+First part of the workflow:
+- Start with local development
+- Just like regular code
+- Preview before pushing
+- Fast feedback loop
+-->
+
+<!--
+# Speaker Notes
 
 First part of the workflow:
 - Start with local development
@@ -339,7 +397,7 @@ hideInToc: true
   <div v-click class="step">
     <div class="icon">👥</div>
     <div class="text">Team Review</div>
-    <div class="detail">Code Review + Plan</div>
+    <div class="detail">Code Review + Preview</div>
   </div>
 
   <div v-click class="arrow">→</div>
