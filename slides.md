@@ -3,8 +3,7 @@ theme: default
 class: text-center
 highlighter: shiki
 lineNumbers: false
-info: |
-  # Infrastructure as Code with Pulumi
+info: From Manual Operations to Software-Defined Infrastructure
 drawings:
   persist: false
 transition: slide-left
@@ -30,7 +29,7 @@ michal.bajer@mews.com
 <!--
 # Presenter Notes
 - Personal intro
-- Brief background a Mews
+- Brief background for Mews
 - Mention some context about Mews and experience with infrastructure automation
 - Set expectation: demo of Pulumi later
 -->

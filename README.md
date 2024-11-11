@@ -1,9 +1,13 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Welcome to Infrastructure as Code with Pulumi
 
-To start the slide show:
+The current version of the presentation is publish in [Pages](https://michal-bajer1.github.io/iac-pulumi-seminar).
 
-- `npm install`
-- `npm run dev`
+## Slidev
+
+To start the slide show locally:
+
+- `pnpm install`
+- `pnpm run dev`
 - visit http://localhost:3030
 
 Edit the [slides.md](./slides.md) to see the changes.
