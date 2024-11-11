@@ -999,6 +999,11 @@ Ongoing areas of improvement and focus
     <div class="mb-2 font-bold text-sm">Testing Infrastructure</div>
     <div class="text-sm opacity-75">Effective testing strategies for infrastructure code</div>
   </div>
+
+  <div class="mt-4">
+    <div class="mb-2 font-bold text-sm">Coding patterns</div>
+    <div class="text-sm opacity-75">Complex coding patterns colide with (mostly) declarative IaC code</div>
+  </div>
 </div>
 
 ::right::

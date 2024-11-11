@@ -289,7 +289,7 @@ Declarative definitions and immutable infrastructure
 ::left::
 
 <div v-click class="principle-box">
-  <div class="text-xl mb-2">Declarative Definitions</div>
+  <div class="text-xl mb-2"><span v-mark.underline.orange>Declarative</span> Definitions</div>
   <ul>
     <li>Describe desired state</li>
     <li>System handles "how"</li>
@@ -365,7 +365,7 @@ Different tools for different infrastructure needs
     <li><strong>Ansible</strong> - Configuration</li>
     <li><strong>Chef</strong> - VM management</li>
     <li><strong>Kubernetes</strong> - Containers</li>
-    <li><strong>Helm</strong> - K8s packages</li>
+    <li><strong>Helm</strong> - Kubernetes packages</li>
   </ul>
 </div>
 

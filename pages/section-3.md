@@ -16,7 +16,7 @@ hideInToc: true
 
 # What Makes Pulumi Different
 
-## Specialized DSL
+## Specialized Domain Specific Language (DSL)
 ```hcl
 # Terraform HCL
 resource "azurerm_container_app" "example" {
@@ -254,6 +254,7 @@ Building blocks of Pulumi infrastructure
       <li>Resource tracking</li>
       <li>Change detection</li>
       <li>Team synchronization</li>
+      <li>State locking</li>
     </ul>
   </div>
 </div>
