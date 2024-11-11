@@ -25,6 +25,8 @@ From Manual Operations to Software-Defined Infrastructure
 
 Michal Bajer | Mews | 2024
 
+michal.bajer@mews.com
+
 <!--
 # Presenter Notes
 - Personal intro

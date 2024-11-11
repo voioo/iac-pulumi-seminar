@@ -12,11 +12,22 @@ From manual clicks to infrastructure at scale
 <!--
 # Speaker Notes
 
-Transition points:
-- We've seen how we got here
-- Now let's look at how we solve it
-- Connect past problems to current solutions
-- Setup for demo
+Setup:
+- Bridge from history to solutions
+- Frame the fundamental challenge
+- Connect to their experiences
+
+Key Points:
+- Manual ways don't scale
+- Teams need better tools
+- Common patterns emerge
+
+Questions/Engagement:
+- "How do you handle infrastructure now?"
+- "What problems do you face?"
+
+Next:
+- Show traditional approach first
 -->
 
 ---
@@ -54,11 +65,24 @@ Building and scaling your first application
 </style>
 
 <!--
-# Presenter Notes
-- Introduce real-world scenario
-- Connect to their experiences
-- Set up for infrastructure solutions
-- Bridge to next section
+# Speaker Notes
+
+Setup:
+- Realistic scenario they'll face
+- Common startup journey
+- Growing pains are normal
+
+Key Points:
+- Small team, big ambitions
+- Manual processes break down
+- Need for automation appears
+
+Questions/Engagement:
+- "Seen these challenges?"
+- "How would you solve them?"
+
+Next:
+- Look at two possible approaches
 -->
 
 ---
@@ -97,6 +121,20 @@ hideInToc: true
 <!--
 # Speaker Notes
 
+Setup:
+- Contrast traditional vs modern
+- Both achieve same result
+- Different long-term impacts
+
+Key Points:
+- Clicking: Fast start, hard to scale
+- Code: Initial investment, long-term gain
+- Both valid in different contexts
+
+Questions/Engagement:
+- "Which have you tried?"
+- "What were the results?"
+
 Demo plan:
 1. "Let me show you the traditional way first..."
 2. Open Azure Portal
@@ -112,9 +150,6 @@ Questions to ask:
 - "How would you document all these steps?"
 - "How would you share this with your team?"
 - "What happens when you need 10 of these?"
-
-Key message:
-Manual processes don't scale with modern needs
 -->
 
 ---
@@ -155,10 +190,27 @@ Why clicking doesn't scale
 }
 </style>
 
----
-layout: two-cols-header
-hideInToc: true
----
+<!--
+# Speaker Notes
+
+Setup:
+- Real problems from experience
+- Not theoretical issues
+- Every team faces these
+
+Key Points:
+- Process issues compound
+- Team issues multiply
+- Documentation always lags
+- Changes become risky
+
+Questions/Engagement:
+- "Which issues resonate most?"
+- "How do you handle these now?"
+
+Next:
+- Introduce better approaches
+-->
 
 ---
 layout: two-cols-header
@@ -202,16 +254,22 @@ Infrastructure managed with the same rigor as application code
 <!--
 # Speaker Notes
 
-Connect to their experience:
-- "Like your git workflow"
-- "Similar to unit tests"
-- "Think declarative like SQL"
-- "Remember containers vs VMs"
+Setup:
+- Connect to their software practices
+- Same rigor as application code
+- Proven software principles
 
-Ask about principles:
-- "Which seems most valuable?"
-- "Which might be challenging?"
-- "Used any of these in projects?"
+Key Points:
+- Version control for infrastructure
+- Automation removes human error
+- Review process for changes
+
+Questions/Engagement:
+- "Which principle seems most valuable?"
+- "What challenges do you see?"
+
+Next:
+- More principles to consider
 -->
 
 ---
@@ -251,6 +309,27 @@ Declarative definitions and immutable infrastructure
   @apply p-4 rounded bg-gray-100 bg-opacity-10;
 }
 </style>
+
+<!--
+# Speaker Notes
+
+Setup:
+- These build on previous principles
+- More focused on operations
+- Different way of thinking
+
+Key Points:
+- Describe what, not how
+- Don't modify, replace
+- State-driven approach
+
+Questions/Engagement:
+- "How is this different from scripting?"
+- "Where might this help?"
+
+Next:
+- Look at available tools
+-->
 
 ---
 layout: two-cols-header
@@ -293,18 +372,29 @@ Different tools for different infrastructure needs
 <!--
 # Speaker Notes
 
-Key points:
-- Different tools solve different problems
-- Can be complementary
+Setup:
+- Many tools solve different problems
+- No single perfect solution
+- Choose based on needs
+
+Key Points:
+- General vs specialized
+- Multi-cloud vs single cloud
+- Configuration vs provisioning
 - We'll focus on Pulumi because:
   * Real programming languages
   * Strong typing
   * Familiar development experience
 
-Questions to ask:
-- "Used any of these tools?"
+Questions/Engagement:
+- "Used any of these?"
+- "Which would fit your needs?"
 - "Seen them in internships/jobs?"
+
+Next:
+- Focus on development workflow
 -->
+
 ---
 layout: center
 hideInToc: true
@@ -365,25 +455,23 @@ From local development to deployment
 
 <!--
 # Speaker Notes
-First part of the workflow:
-- Start with local development
-- Just like regular code
+
+Setup:
+- Similar to app development
+- Familiar git workflow
+- Focus on safety
+
+Key Points:
+- Local development first
 - Preview before pushing
-- Fast feedback loop
--->
+- Standard PR process
 
-<!--
-# Speaker Notes
+Questions/Engagement:
+- "Familiar workflow?"
+- "What would you verify?"
 
-First part of the workflow:
-- Start with local development
-- Just like regular code
-- Preview before pushing
-- Fast feedback loop
-
-Questions:
-- "Familiar workflow from software dev?"
-- "What would you expect to see in preview?"
+Next:
+- See team review process
 -->
 
 ---
@@ -446,18 +534,23 @@ hideInToc: true
 <!--
 # Speaker Notes
 
-Second part focused on team:
-- Standard PR process
-- Automated validation
-- Confident deployments
-- Just like app development
+Setup:
+- Infrastructure changes need review
+- Same rigor as code review
+- Team involvement important
 
-Key points:
-- Infrastructure changes get same rigor
+Key Points:
 - Multiple eyes on changes
-- Automated safety checks
+- Automated validation
 - Clear deployment process
+
+Questions/Engagement:
+- "How do you review changes now?"
+- "What would you check?"
 
 Demo teaser:
 - "We'll see this in action soon"
+
+Next:
+- See this in practice
 -->

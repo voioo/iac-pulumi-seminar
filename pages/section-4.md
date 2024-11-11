@@ -56,7 +56,7 @@ graph LR
 <!--
 # Presenter Notes
 - Have Azure Portal open
-- VS Code ready with extensions
+- Rider ready
 - Terminal with Azure CLI logged in
 - Check Pulumi login status
 
@@ -101,11 +101,24 @@ hideInToc: true
 </v-clicks>
 
 <!--
-# Presenter Notes
-- Type code as you go
-- Explain each property
-- Show autocompletion
-- Highlight dependency tracking
+# Speaker Notes
+
+Setup:
+- Begin with configuration
+- Secure sensitive data
+- Basic structure
+
+Key Points:
+- Config management
+- Resource organization
+- Name conventions
+
+Questions/Engagement:
+- "How do you handle secrets?"
+- "What else needs config?"
+
+Next:
+- Add core resources
 -->
 
 ---
@@ -139,6 +152,27 @@ hideInToc: true
 
 </v-clicks>
 
+<!--
+# Speaker Notes
+
+Setup:
+- Building core infrastructure
+- Production considerations
+- Resource relationships
+
+Key Points:
+- Environment setup
+- Database configuration
+- Security settings
+
+Questions/Engagement:
+- "Which settings are critical?"
+- "What would you change?"
+
+Next:
+- Complete the setup
+-->
+
 ---
 hideInToc: true
 ---
@@ -163,6 +197,27 @@ hideInToc: true
     );
    ```
 </v-clicks>
+
+<!--
+# Speaker Notes
+
+Setup:
+- Database tier decisions
+- Performance settings
+- Availability options
+
+Key Points:
+- SKU selection impacts cost
+- Redundancy choices
+- Scaling capabilities
+
+Questions/Engagement:
+- "Which settings for dev vs prod?"
+- "How do you size databases?"
+
+Next:
+- Add application layer
+-->
 
 ---
 hideInToc: true
@@ -192,11 +247,24 @@ hideInToc: true
 </v-clicks>
 
 <!--
-# Presenter Notes
-- Explain SKU options
-- Show how preview works
-- Point out dependency chain
-- Discuss production considerations
+# Speaker Notes
+
+Setup:
+- Application deployment
+- Resource allocation
+- Scaling configuration
+
+Key Points:
+- Container resources
+- Scaling rules
+- Dependencies
+
+Questions/Engagement:
+- "How do you size containers?"
+- "What triggers scaling?"
+
+Next:
+- Review all changes
 -->
 
 ---
@@ -219,6 +287,27 @@ hideInToc: true
 
 </v-clicks>
 
+<!--
+# Speaker Notes
+
+Setup:
+- Preview before deployment
+- Check all changes
+- Understand dependencies
+
+Key Points:
+- Creation order
+- Resource relationships
+- Configuration validation
+
+Questions/Engagement:
+- "What would you verify?"
+- "See any concerns?"
+
+Next:
+- Deploy changes
+-->
+
 ---
 hideInToc: true
 ---
@@ -236,18 +325,24 @@ hideInToc: true
 </v-clicks>
 
 <!--
-# Presenter Notes
-- Run deployment live
-- Show Azure portal results
-- Verify configurations
-- Demonstrate access
+# Speaker Notes
 
-## Verification Points
-- Resource Creation
-- Configuration Application
-- Security Settings
-- Connectivity
-- Monitoring Status
+Setup:
+- Final checks
+- Deployment process
+- Verification steps
+
+Key Points:
+- Review changes first
+- Monitor deployment
+- Verify resources
+
+Questions/Engagement:
+- "What could go wrong?"
+- "How to validate success?"
+
+Next:
+- Make some changes
 -->
 
 ---
@@ -276,11 +371,24 @@ hideInToc: true
 </v-clicks>
 
 <!--
-# Presenter Notes
-- Make live changes
-- Show state updates
-- Demonstrate protection
-- Discuss rollback
+# Speaker Notes
+
+Setup:
+- Common change scenario
+- Preview impact
+- Update process
+
+Key Points:
+- Change detection
+- State updates
+- Resource protection
+
+Questions/Engagement:
+- "Which changes are risky?"
+- "How to test changes?"
+
+Next:
+- Understanding limitations
 -->
 
 ---
@@ -329,11 +437,24 @@ Understanding what preview can and cannot catch
 </style>
 
 <!--
-# Presenter Notes
-- Show preview examples
-- Discuss limitations
-- Share workaround strategies
-- Mention common pitfalls
+# Speaker Notes
+
+Setup:
+- Preview is powerful but limited
+- Understanding boundaries
+- Real-world experience
+
+Key Points:
+- Shows structural changes
+- Misses runtime validation
+- Test in dev first
+
+Questions/Engagement:
+- "Where might preview fail?"
+- "How to handle limitations?"
+
+Next:
+- Team processes
 -->
 
 ---
@@ -387,10 +508,23 @@ flowchart LR
 
 <!--
 # Speaker Notes
-- Show real PR example
-- Discuss review process
-- Highlight automation
-- Share team practices
+
+Setup:
+- Standard PR process
+- Multiple checkpoints
+- Team collaboration
+
+Key Points:
+- Code review first
+- Plan verification
+- Automated checks
+
+Questions/Engagement:
+- "Similar to your workflow?"
+- "What would you check?"
+
+Next:
+- Benefits and challenges
 -->
 
 ---
@@ -463,6 +597,33 @@ Ask:
 "Which challenge concerns you?"
 -->
 
+<!--
+# Speaker Notes
+
+Setup:
+- Realistic assessment
+- Both sides matter
+- Trade-offs exist
+
+Key Points:
+- Benefits compound
+- Challenges decrease
+- Team impact
+
+Challenges:
+- Talk about difficulties
+- Not appripriate at every scale
+- Most are one-time costs
+- Common to all new tech adoption
+
+Questions/Engagement:
+- "Which benefit matters most?"
+- "Which challenge concerns you?"
+
+Next:
+- Language advantages
+-->
+
 ---
 layout: two-cols-header
 hideInToc: true
@@ -509,6 +670,21 @@ Using C# for Infrastructure Management
 
 <!--
 # Speaker Notes
-- Highlight productivity gains
-- Compare to YAML/HCL limitations
+
+Setup:
+- C# advantages
+- Developer experience
+- Team productivity
+
+Key Points:
+- Strong typing helps
+- IDE support
+- Code organization
+
+Questions/Engagement:
+- "Using these features now?"
+- "Which help most?"
+
+Next:
+- Platform building
 -->

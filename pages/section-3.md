@@ -37,22 +37,24 @@ var app = new ContainerApp("example-app", new ContainerAppArgs
 <!--
 # Speaker Notes
 
-Key points to emphasize:
-- From specialized language to familiar code
-- Same end result, different approach
-- Benefits of real programming language:
-  * IDE support
-  * Type safety
-  * Code completion
+Setup:
+- Compare approaches side by side
+- Both define same resources
+- Different developer experience
 
-Questions to ask:
-- "Which syntax feels more natural to you?"
-- "What looks familiar from your C# experience?"
+Key Points:
+- Real languages vs DSL
+- Full IDE support
+- Type safety included
 
-Demo preparation:
-- Show quick VS Code comparison
-- Highlight IntelliSense in Pulumi
+Questions/Engagement:
+- "Which feels more natural?"
+- "What advantages do you see?"
+
+Next:
+- See real-world example
 -->
+
 ---
 layout: center
 hideInToc: true
@@ -81,22 +83,23 @@ resource "azurerm_container_app" "example" {
 <!--
 # Speaker Notes
 
-Key points to emphasize:
-- Real infrastructure example
-- Explain the basic Azure resources
+Setup:
+- Common real-world scenario
 - Multiple configuration levels
 - Resource dependencies
-- Default values and conventions
 
-Questions to ask:
-- "What might be challenging about maintaining this?"
-- "How would you handle multiple similar deployments?"
-- "What if you need to change all CPU values?"
+Key Points:
+- Configuration complexity
+- Resource relationships
+- Default handling
+- Explain the basic Azure resources
 
-Engagement strategy:
-1. Walk through each section
-2. Point out nested configuration
-3. Highlight dependency management
+Questions/Engagement:
+- "What might be hard to maintain?"
+- "How would you handle changes?"
+
+Next:
+- See same in Pulumi
 -->
 
 ---
@@ -129,22 +132,24 @@ var app = new ContainerApp("example-app", new ContainerAppArgs
 <!--
 # Speaker Notes
 
-Key points to emphasize:
-- Same infrastructure, different approach
-- Strong typing prevents errors
-- Named parameters improve readability
-- Helper methods available (GetResources)
+Setup:
+- Same outcome, different approach
+- Familiar C# patterns
+- Strong typing benefits
 
-Questions to ask:
-- "What C# features could help manage this?"
-- "How would refactoring work here?"
-- "Where could we extract reusable code?"
+Key Points:
+- Type safety prevents errors
+- IDE support helps
+- Helper methods available
 
-Demo preparation:
-- Show IntelliSense in action
-- Demonstrate refactoring
-- Show type checking
+Questions/Engagement:
+- "What C# features help here?"
+- "How would you refactor this?"
+
+Next:
+- Build on this pattern
 -->
+
 ---
 layout: two-cols-header
 hideInToc: true
@@ -183,15 +188,24 @@ var database = new SqlDatabase("demo")
 <!--
 # Speaker Notes
 
-Key points to emphasize:
-- SDK encapsulates complexity
-- Fluent interface for readability
-- Built-in best practices
-- Reduced cognitive load
+Setup:
+- Evolution of infrastructure code
+- Building team patterns
+- Reducing complexity
 
-Questions to ask:
-- "How does this help new team adopters?"
+Key Points:
+- Raw: Full control
+- High-level: Best practices
+- Both have their place
+
+Questions/Engagement:
+- "Where would each fit?"
+- "What would you abstract?"
+
+Next:
+- Core concepts overview
 -->
+
 ---
 layout: two-cols-header
 hideInToc: true
@@ -252,16 +266,24 @@ Building blocks of Pulumi infrastructure
 
 <!--
 # Speaker Notes
-Core building blocks:
+
+Setup:
+- Building blocks of Pulumi
+- Each serves specific purpose
+- Work together naturally
+
+Key Points:
 - Projects organize code
-- Resources represent infrastructure
-- Stacks manage environments
+- Resources are cloud components
+- Stacks separate environments
 - State tracks everything
 
-Key points:
-- Each concept builds on others
-- Clear separation of concerns
-- Familiar to developers
+Questions/Engagement:
+- "Similar to your project structure?"
+- "Which concept is new?"
+
+Next:
+- See these in practice
 -->
 
 ---
@@ -353,6 +375,27 @@ public class MyStack : Stack
     }
 }
 ```
+<!--
+# Speaker Notes
+
+Setup:
+- Moving from concepts to code
+- Constructor entry point
+- Configuration handling
+
+Key Points:
+- Stack structure drives code
+- Configuration management
+- Resource organization
+
+Questions/Engagement:
+- "Where would you use stacks?"
+- "What would you put in config vs code?"
+
+Next:
+- Look at stack operations
+-->
+
 ---
 layout: default
 hideInToc: true
@@ -383,23 +426,24 @@ size           small
 <!--
 # Speaker Notes
 
-Key points to emphasize:
-- One implementation, multiple configs
-- Stack selection determines values
-- Config drives resource creation
-- Easy environment switching
+Setup:
+- Daily operations with stacks
+- Common commands
+- Configuration management
 
-Practical examples:
-- Development environments
-- Regional deployments
-- Customer-specific instances
-- Testing configurations
+Key Points:
+- Stack switching is easy
+- Config per environment
+- Clear separation
 
-Questions to ask:
-- "What would you put in config vs code?"
-- "How could this help with testing?"
-- "What other environments might you need?"
+Questions/Engagement:
+- "What would you configure?"
+- "Which environments need separate stacks?"
+
+Next:
+- Understanding resources
 -->
+
 ---
 layout: center
 hideInToc: true
@@ -428,13 +472,16 @@ var app = new ContainerApp("app-demo", new ContainerAppArgs { ... }, new CustomR
 <!--
 # Speaker Notes
 
-Key points to emphasize:
-- Resources are cloud components
-- Dependencies can be:
-  * Implicit (through properties)
-  * Explicit (through DependsOn)
+Setup:
+- Resources are building blocks
+- Dependencies matter
+- Automatic ordering
+
+Key Points:
+- Implicit vs explicit deps
 - Pulumi builds dependency graph
-- Graph determines deployment order
+- Graph determines order
+- Safe updates
 
 Resource characteristics:
 1. Unique identity
@@ -442,9 +489,13 @@ Resource characteristics:
 3. Dependencies
 4. Lifecycle management
 
-Questions to ask:
+Questions/Engagement:
 - "How do you handle dependencies without IaC?"
+
+Next:
+- State management
 -->
+
 ---
 layout: two-cols-header
 hideInToc: true
@@ -496,23 +547,23 @@ How Pulumi tracks your infrastructure
 <!--
 # Speaker Notes
 
-Key points to emphasize:
-- State = Source of truth
-- Tracks all resources
-- Records dependencies
-- Enables team collaboration
+Setup:
+- State tracks everything
+- Critical for operations
+- Backend choices matter
 
-Why state matters:
-1. Knows what exists
-2. Tracks relationships
-3. Handles updates
-4. Enables cleanup
+Key Points:
+- State is source of truth (or is it?)
+- Records all resources
+- Team collaboration needs
 
-Questions to ask:
+Questions/Engagement:
 - "What happens if state is lost?"
-- "How do you track resources now?"
-- "Which backend would you choose?"
+
+Next:
+- Working with state
 -->
+
 ---
 layout: center
 hideInToc: true
@@ -552,22 +603,24 @@ graph LR
 <!--
 # Speaker Notes
 
-Key points to emphasize:
-- State can drift from reality
-- Regular refresh recommended
-- Backup state regularly
-- Import/export for migration
+Setup:
+- State operations are critical
+- Reality can drift
+- Regular maintenance needed
 
-Common scenarios:
-1. Manual changes detection
-2. Resource cleanup
-3. Team synchronization
-4. Disaster recovery
+Key Points:
+- Refresh syncs state
+- Export for backup
+- Import for recovery
 
-Questions to ask:
-- "When might state drift occur?"
-- "How would you refresh the state?"
+Questions/Engagement:
+- "When might state drift?"
+- "How would you prevent it?"
+
+Next:
+- Architecture overview
 -->
+
 ---
 layout: two-cols-header
 hideInToc: true
@@ -743,4 +796,7 @@ Questions to ask:
 - "Where could errors occur?"
 - "How would rollback work?"
 - "What happens if remote call fails?"
+
+Next:
+- Let's see real implementation
 -->

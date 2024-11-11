@@ -9,6 +9,26 @@ class: text-center
 Build reusable patterns at scale
 </div>
 
+<!--
+# Speaker Notes
+
+Setup:
+- Platform builds on our IaC knowledge
+- Enterprise-scale challenges
+- Beyond individual resources
+
+Key Points:
+- Moving from tools to platform
+- Standardizing practices
+- Team enablement
+
+Questions/Engagement:
+- "What's your experience with platforms?"
+
+Next:
+- Look at infrastructure delivery
+-->
+
 ---
 layout: center
 hideInToc: true

@@ -11,9 +11,23 @@ Two parallel revolutions that shaped modern computing
 
 <!--
 # Speaker Notes
-- Little bit of history to explain where IaC comes from
-- Two main trends in the last 20 years
-- They both lead to increase of complexity in our infrastructure
+
+Setup:
+- Frame history as context for modern tools
+- Set expectation for parallel stories
+- Connect to their development experience
+
+Key Points:
+- Two revolutions happened together
+- Each drove the other forward
+- Still evolving today
+
+Questions/Engagement:
+- "What infrastructure changes have you seen?"
+- "How has development changed with it?"
+
+Next:
+- Let's look at infrastructure changes first
 -->
 
 ---
@@ -45,12 +59,25 @@ timeline
         : Version Controlled
         : Seconds to Deploy
 ```
-
 <!--
 # Speaker Notes
-- Start with simple timeline view
-- Emphasize the progression of speed and the introduction of on-demand scaling
-- Point out key technology shifts
+
+Setup:
+- Visualize the transformation scale
+- Focus on speed of change
+- Note accelerating pace
+
+Key Points:
+- Each jump brought 10x improvement
+- Changed how we think about servers
+- Automation became essential
+
+Questions/Engagement:
+- "When did you start working with cloud?"
+- "Which era's tools do you use?"
+
+Next:
+- See how these changes affected teams
 -->
 
 ---
@@ -108,16 +135,23 @@ Quantifying the impact of infrastructure transformation
 <!--
 # Speaker Notes
 
-Key points to highlight:
-- Each era brings order of magnitude improvement
-- Provision time: Weeks → Seconds (10000x faster)
-- Scale: 10 → 1000+ servers (100x capacity)
+Setup:
+- These metrics don't show real impact, mostly ilustrate to idea
+- Focus on two key metrics
 
-Questions for engagement:
-- "What technological changes enabled each jump?"
-- "Why did organizations need this scale?"
-- "What skills were needed at each stage?"
+Key Points:
+- Deployment time: 10000x faster
+- Admin capacity: 100x increase
+- Every step multiplied capability
+
+Questions/Engagement:
+- "What enabled each jump?"
+- "Which metric matters more?"
+
+Next:
+- Look at what drove these changes
 -->
+
 ---
 layout: center
 hideInToc: true
@@ -151,9 +185,25 @@ timeline
 
 <!--
 # Speaker Notes
-- Connect to their software development experience
-- Point out increasing complexity
-- Show how infrastructure needs grew
+
+Setup:
+- Connect to their software experience
+- System architecture drove infrastructure
+- Still happening today
+
+Key Points:
+- Monolith: Simple but limiting
+- Services: Team independence
+- Cloud Native: Infrastructure complexity
+- Modern: Mix of approaches
+
+Questions/Engagement:
+- "Have you worked on any team projects?"
+- "Which architectures have you worked with?"
+- "What drove your architecture choices?"
+
+Next:
+- See how this affected operations
 -->
 
 ---
@@ -181,17 +231,16 @@ hideInToc: true
 <!--
 # Speaker Notes
 
+Setup:
+- Each stage brought new challenges
+- Progress wasn't always smooth
+- Different teams moved at different speeds
+
 Expand on each point:
 - Monolithic: Like your early one person projects - simple stack
 - SOA: Teams start interfering with each other, need coordination
 - Cloud Native: Kubernetes entered the scene and more complex automated orchestration becomes accesible
 - Modern: Mix of approaches based on needs
-
-Additional context to mention:
-- Each stage requires more automation
-- Manual processes don't scale
-- Teams need independence
-- Configuration becomes critical
 
 Key message: Infrastructure complexity follows system complexity - this is why we need better tools and practices.
 
@@ -227,6 +276,11 @@ A fundamental shift in infrastructure mindset
 <!--
 # Speaker Notes
 
+Setup:
+- Fundamental mindset shift
+- Changed how we manage servers
+- Still relevant today
+
 Key message: Fundamental shift in how we think about servers
 
 Additional context to mention:
@@ -235,8 +289,10 @@ Additional context to mention:
 - Like your laptop (pet) vs a Docker container (cattle)
 - This mindset shift enabled modern cloud scaling
 
-Question: "Which approach do you use in your projects?"
--->
+Questions/Engagement:
+- "Where do you see each approach?"
+- "Which fits cloud better?"-->
+
 ---
 layout: center
 hideInToc: true
@@ -254,11 +310,11 @@ hideInToc: true
   </div>
 
   <div v-click class="question">
-    Automated deployment experience?
+    Automated deployment experience (CI/CD)?
   </div>
 
   <div v-click class="question">
-    Which cloud providers?
+    Which tech stack?
   </div>
 </div>
 
@@ -271,14 +327,20 @@ hideInToc: true
 <!--
 # Speaker Notes
 
-Interaction approach:
-- Ask for raised hands
-- Note the distribution of experience
-- Use this to adjust upcoming examples
+Setup:
+- Quick audience check
+- Keep it light and interactive
+- Watch for experience distribution
 
-Look for:
-- AWS/Azure experience for examples
-- Prior automation experience
-- Tools they're familiar with
-- Which concepts need more explanation
+Key Points:
+- Note cloud familiarity
+- Infrastructure tool exposure
+- Cloud provider preferences
+
+Questions/Engagement:
+- Use raised hands for each point
+- Note which tools are familiar
+
+Next:
+- Adjust examples based on responses
 -->
