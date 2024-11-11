@@ -3,7 +3,7 @@ name: Deploy to GH pages
 on:
   workflow_dispatch:
   push:
-    branches: [not-yet]
+    branches: [main]
 
 permissions:
   contents: read

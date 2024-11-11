@@ -11,7 +11,7 @@ Rethinking Infrastructure Management
 
 <!--
 # Speaker Notes
-Setup (1 min):
+Setup:
 - "Let's look at where infrastructure management might be heading..."
 - Connect to limitations we've seen in current tools
 -->
@@ -65,11 +65,11 @@ flowchart TB
 <!--
 # Speaker Notes
 
-Setup (1-2 mins):
+Setup:
 - "Imagine infrastructure that gives instant feedback..."
 - Compare to current workflow limitations
 
-Key Concepts (3-4 mins):
+Key Concepts:
 
 1. Digital Twins
    - Perfect mirror of infrastructure
@@ -171,10 +171,10 @@ flowchart TB
 <!--
 # Speaker Notes
 
-Setup (1 min):
+Setup:
 - "Let's compare the workflows..."
 
-Key Differences (3-4 mins):
+Key Differences:
 
 1. Feedback Speed
    - Current: Minutes to hours

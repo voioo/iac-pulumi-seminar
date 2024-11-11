@@ -34,21 +34,17 @@ flowchart LR
 <!--
 # Speaker Notes
 
-Setup (2-3 mins):
-- Start by asking: "How long do you usually wait for infrastructure access?"
-- Use their answers to frame the problem
-
 Key Points to Cover:
 
-1. Traditional Process (Left diagram)
+1. Traditional Process (Top diagram)
    - Teams submitting tickets
    - Manual review/approval cycles
    - Weeks of waiting time
-   - No visibility into progress
+   - Low visibility into progress
    - High process overhead
-   - Impact on team velocity
+   - Impact on team velocity (rules of flow)
 
-2. Platform Evolution (Right diagram)
+2. Platform Evolution (Bottom diagram)
    - Self-service capabilities
    - Automated validation
    - Minutes vs weeks
@@ -135,9 +131,6 @@ Understanding common scaling issues
 
 <!--
 # Speaker Notes
-
-Setup (1-2 mins):
-- "These challenges affect organizations of all sizes..."
 
 Key Points to Cover:
 1. Speed & Scale
@@ -467,7 +460,6 @@ Transformation of infrastructure management
     <li>All changes affect everyone</li>
     <li>One database for all</li>
     <li>Central management</li>
-    <li>Deployment queues</li>
     <li>Limited team autonomy</li>
   </ul>
 </div>
@@ -501,10 +493,10 @@ Transformation of infrastructure management
 <!--
 # Speaker Notes
 
-Setup (1 min):
+Setup:
 - "Let's see what actually changed day-to-day..."
 
-Evolution Impact (3-4 mins):
+Evolution Impact:
 
 1. Technical Changes
    - From single app to many services
@@ -585,10 +577,10 @@ Key principles of successful infrastructure platforms
 <!--
 # Speaker Notes
 
-Setup (1 min):
+Setup:
 - "Here's why this approach succeeded..."
 
-Key Success Factors (3-4 mins):
+Key Success Factors:
 
 1. Standards
    - Clear best practices
@@ -683,7 +675,7 @@ Building abstractions for developer experience
 <!--
 # Speaker Notes
 
-Setup (1 min):
+Setup:
 - "Let's look at how our SDK evolved..."
 - Show how abstraction layers developed
 
@@ -753,7 +745,7 @@ var database = AzureSqlDatabase.Create(
 <!--
 # Speaker Notes
 
-Setup (2-3 mins):
+Setup:
 - "Let's see real examples from our codebase..."
 
 Evolution Steps:
@@ -814,7 +806,7 @@ app.InjectRedisConnectionInfo(cache, new RedisOptions());
 <!--
 # Speaker Notes
 
-Setup (2-3 mins):
+Setup:
 - "This is our current approach..."
 
 Key Features:
@@ -878,7 +870,7 @@ Building effective infrastructure abstractions
     <li>Familiar C# patterns</li>
     <li>Strong type safety</li>
     <li>IDE support (completion, docs)</li>
-    <li>Clear error messages</li>
+    <li>Validation rules embedded</li>
     <li>Fast feedback loops</li>
     <li>Self-service deployment</li>
   </ul>
@@ -894,11 +886,11 @@ Building effective infrastructure abstractions
 <!--
 # Speaker Notes
 
-Setup (1 min):
+Setup:
 - "These principles guide our SDK development..."
 - Connect back to previous challenges
 
-Key Areas to Cover (4-5 mins):
+Key Areas to Cover:
 
 1. Core Principles
    - Don't hide complexity, make it manageable
@@ -927,12 +919,6 @@ Key Areas to Cover (4-5 mins):
    - Easy configuration management
    - Common patterns reduce cognitive load
    - Real Example: Configuration injection patterns
-
-Real Impact Examples:
-- Onboarding time reduced from weeks to days
-- Configuration errors down by 70%
-- Deployment time from hours to minutes
-- Security review time reduced by 50%
 
 Questions to Drive Engagement:
 - "Which principles resonate most with your experience?"
@@ -996,8 +982,8 @@ Ongoing areas of improvement and focus
   </div>
   
   <div class="mt-4">
-    <div class="mb-2 font-bold text-sm">Cloud Evolution</div>
-    <div class="text-sm opacity-75">Keeping up with rapid cloud service changes</div>
+    <div class="mb-2 font-bold text-sm">Speed of delivery</div>
+    <div class="text-sm opacity-75">The development of the SDK can be slow</div>
   </div>
 </div>
 

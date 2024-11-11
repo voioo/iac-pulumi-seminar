@@ -212,7 +212,7 @@ hideInToc: true
    pulumi preview
    ```
 
-2. Check Generated Plan
+2. Check Generated Preview
    - Resource creation order
    - Property settings
    - Dependencies
@@ -232,7 +232,6 @@ hideInToc: true
 2. Preview Changes
 3. Execute Deployment
 4. Verify Resources
-5. Check Access
 
 </v-clicks>
 
@@ -273,7 +272,6 @@ hideInToc: true
 - State Management
 - Dependency Updates
 - Resource Protection
-- Rollback Options
 
 </v-clicks>
 
@@ -428,7 +426,7 @@ Making the transition to Infrastructure as Code
       <li>Initial Setup</li>
       <li>Team Adoption</li>
       <li>State Management</li>
-      <li>Legacy Integration</li>
+      <li>Integration of existing resources</li>
     </ul>
   </div>
 </div>
@@ -482,8 +480,8 @@ Using C# for Infrastructure Management
       <li>Strong Type System</li>
       <li>IDE Support</li>
       <li>Refactoring Tools</li>
-      <li>Testing Framework</li>
       <li>Package Ecosystem</li>
+      <li>Testing Framework?</li>
     </ul>
   </div>
 </div>
@@ -496,7 +494,7 @@ Using C# for Infrastructure Management
     <ul class="text-sm">
       <li>Classes and Inheritance</li>
       <li>Error Handling</li>
-      <li>Documentation Tools</li>
+      <li>Documentation Comments</li>
       <li>Code Sharing</li>
       <li>Team Collaboration</li>
     </ul>
