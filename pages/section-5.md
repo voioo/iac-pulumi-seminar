@@ -396,16 +396,16 @@ hideInToc: true
 ```mermaid {scale: 0.6}
 timeline
     title Infrastructure Evolution
-    section 2018 - Monolith
+    section 2012 - Monolith
         Architecture : Single .NET App
         : One SQL Database
         : Simple Deployment
-    section 2020 - Services
+    section 2022 - Services
         Multiplication : Breaking Monolith
         : Multiple Instances
         : Request-based Routing
         : Team Coordination
-    section 2022 - Platform
+    section 2023 - Platform
         Independence : Team Autonomy
         : Self-service
         : Standard Patterns
