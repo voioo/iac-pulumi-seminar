@@ -104,7 +104,7 @@ hideInToc: true
   <div v-click class="flex flex-col items-center">
     <div class="text-4xl mb-4">⌨️</div>
     <div class="text-xl font-bold mb-4">Code Once, Deploy Many</div>
-    <div class="font-mono bg-gray-800 rounded p-4 text-sm">
+    <div class="code-box">
       resource webApp {
         name = "myapp"
         ...
@@ -117,6 +117,12 @@ hideInToc: true
   Let's see what this means in practice...
   (demo)
 </div>
+
+<style>
+.code-box {
+  @apply font-mono p-4 rounded bg-blue-300 bg-opacity-30 text-sm;
+}
+</style>
 
 <!--
 # Speaker Notes
@@ -449,7 +455,7 @@ From local development to deployment
   @apply text-2xl text-blue-400;
 }
 .code-box {
-  @apply font-mono text-sm bg-gray-800 rounded p-2 mt-2;
+  @apply font-mono p-2 rounded bg-blue-300 bg-opacity-30 text-sm;
 }
 </style>
 
