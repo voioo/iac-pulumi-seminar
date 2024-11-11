@@ -561,8 +561,8 @@ In one year
 
 ```mermaid {scale: 0.7}
 xychart-beta
-    x-axis ["Nov 12", "Jan 24", "Apr 6", "Jun 18", "Aug 30", "Nov 11"]
-    y-axis "Value" 2000 --> 8000
+    x-axis "Date" ["Nov 12", "Jan 24", "Apr 6", "Jun 18", "Aug 30", "Nov 11"]
+    y-axis "Count" 2000 --> 8000
     line [2500, 3500, 5000, 5500, 6500, 7200]
 ```
 
