@@ -66,3 +66,6 @@ src: ./pages/section-5.md
 ---
 src: ./pages/section-6.md
 ---
+---
+src: ./pages/section-7.md
+---

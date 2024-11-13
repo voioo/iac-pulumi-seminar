@@ -801,3 +801,22 @@ Questions to ask:
 Next:
 - Let's see real implementation
 -->
+
+---
+layout: center
+hideInToc: true
+---
+
+# Quick Questions
+
+<div class="text-xl space-y-8">
+  <div v-click class="question">
+    What if I already created some resources manually?
+  </div>
+</div>
+
+<style>
+.question {
+  @apply p-4 rounded bg-blue-500 bg-opacity-10 cursor-pointer hover:bg-opacity-20 transition-all;
+}
+</style>

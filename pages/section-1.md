@@ -41,7 +41,6 @@ Major shifts in how we manage infrastructure over decades
 
 ```mermaid
 timeline
-    title Infrastructure Management Journey
     section 2000s
         Physical Era : Manual Operations
         : Datacenter Hardware
@@ -162,7 +161,6 @@ How software systems grew in complexity and scale
 
 ```mermaid
 timeline
-    title Software Systems Evolution
     section Early 2000s
         Monolithic : Single Application
         : One Database

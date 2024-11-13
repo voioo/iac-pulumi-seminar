@@ -44,7 +44,6 @@ Building and scaling your first application
     <ul>
       <li>Small team (3 developers)</li>
       <li>Promising app with database</li>
-      <li>Multiple environments needed</li>
     </ul>
   </div>
 
@@ -53,6 +52,7 @@ Building and scaling your first application
     <ul>
       <li>Manual Azure setup</li>
       <li>Configuration complexity</li>
+      <li>Multiple environments needed</li>
       <li>Team coordination needed</li>
     </ul>
   </div>
@@ -115,7 +115,7 @@ hideInToc: true
 
 <div v-click class="mt-12 text-center text-xl">
   Let's see what this means in practice...
-  (demo)
+  (demo in Azure)
 </div>
 
 <style>
@@ -219,6 +219,50 @@ Next:
 -->
 
 ---
+layout: center
+hideInToc: true
+---
+
+# Why Infrastructure as Code?
+When these goals sound familiar...
+
+<div v-clicks class="mt-8 space-y-4">
+  <div class="goal-item">
+    <span class="text-blue-400">✓</span> Track changes clearly and fully
+  </div>
+  <div class="goal-item">
+    <span class="text-blue-400">✓</span> Know who changed what and why
+  </div>
+  <div class="goal-item">
+    <span class="text-blue-400">✓</span> Make differences between environments intentional
+  </div>
+  <div class="goal-item">
+    <span class="text-blue-400">✓</span> Make deployments and rollbacks easier
+  </div>
+</div>
+
+<div v-click class="mt-12 text-center text-xl bg-blue-500 bg-opacity-10 p-4 rounded">
+  💡Sounds a bit like software development lifecycle?
+</div>
+
+<style>
+.goal-item {
+  @apply text-xl p-2 rounded bg-gray-100 bg-opacity-10;
+}
+</style>
+
+<!--
+# Speaker Notes
+
+Quick transition:
+- "These goals probably sound familiar..."
+- Pause after each point to let it sink in
+- End with the software connection to lead into IaC principles
+
+Keep it light - this is just making the connection between their software experience and infrastructure needs, setting up for the deeper dive into IaC coming next.
+-->
+
+---
 layout: two-cols-header
 hideInToc: true
 ---
@@ -248,6 +292,8 @@ Infrastructure managed with the same rigor as application code
     <li>Consistent results</li>
     <li>Reduced human error</li>
     <li>Scalable operations</li>
+    <li>Policy enforcement</li>
+    <li>Validations</li>
   </ul>
 </div>
 
@@ -289,12 +335,13 @@ Declarative definitions and immutable infrastructure
 ::left::
 
 <div v-click class="principle-box">
-  <div class="text-xl mb-2"><span v-mark.underline.orange>Declarative</span> Definitions</div>
+  <div class="text-xl mb-2"><span v-mark.underline>Declarative</span> Definitions</div>
   <ul>
     <li>Describe desired state</li>
     <li>System handles "how"</li>
     <li>Predictable results</li>
-    <li>Self-documenting</li>
+    <li>Dependency management</li>
+    <li>Idempotency</li>
   </ul>
 </div>
 
@@ -560,3 +607,26 @@ Demo teaser:
 Next:
 - See this in practice
 -->
+
+---
+layout: center
+hideInToc: true
+---
+
+# Quick Questions
+
+<div class="text-xl space-y-8">
+  <div v-click class="question">
+    When do you should project start using IaC?
+  </div>
+
+  <div v-click class="question">
+    Other examples of declarative code?
+  </div>
+</div>
+
+<style>
+.question {
+  @apply p-4 rounded bg-blue-500 bg-opacity-10 cursor-pointer hover:bg-opacity-20 transition-all;
+}
+</style>
