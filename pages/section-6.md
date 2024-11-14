@@ -34,6 +34,186 @@ layout: center
 hideInToc: true
 ---
 
+# The Mews Journey
+
+```mermaid {scale: 0.6}
+timeline
+    section 2012 - Monolith
+        Growth : Single .NET App
+        : One SQL Database
+        : Simple Deployment
+        : Horizontal scaling 
+    section 2022 - Services
+        Multiplication : Breaking Monolith
+        : New Separate databases
+        : Multiple domains
+        : Minimal tooling
+    section 2023 - Platform
+        Independence : Team Autonomy
+        : Self-service
+        : Standard Patterns
+        : Clear Ownership
+```
+
+<!--
+# Speaker Notes
+
+Setup (1 min):
+- "Let me show you our infrastructure evolution..."
+- Connect to common growth patterns
+
+Journey Phases (4-5 mins):
+
+1. Monolith Phase
+   - Simple but effective initially
+   - One team, one codebase
+   - Fast deployment, but...
+   - All changes affect everyone
+   - Limited team scaling
+
+2. Service Multiplication
+   - Teams growing rapidly
+   - Need for independence
+   - Breaking apart monolith
+   - New challenges emerged:
+     * Deployment coordination
+     * Configuration management
+     * Environment consistency
+     * Team dependencies
+     * "You build it, you run it" mindset
+
+3. Platform Solution
+   - Team independence achieved
+   - Clear ownership boundaries
+   - Standardized practices
+   - Self-service infrastructure
+   - Faster innovation cycle
+
+Real Impact Examples:
+- Deployment time changes
+- Team onboarding speed
+- Innovation velocity
+- Development satisfaction
+
+Questions to Drive Engagement:
+- "Where are your projects on this journey?"
+- "What signs show you need to evolve?"
+- "How would you handle this transition?"
+
+Connect to Their Experience:
+- Reference course project complexity
+- Discuss startup evolution patterns
+- Show industry parallels
+-->
+
+---
+layout: two-cols-header
+hideInToc: true
+---
+
+# Before and After
+Transformation of infrastructure management
+
+::left::
+
+<div v-click class="phase-box red-tint">
+  <div class="text-xl mb-2">⚡ Monolith Era</div>
+  <ul class="text-sm">
+    <li>Single deployment unit</li>
+    <li>All changes affect everyone</li>
+    <li>One database for all</li>
+    <li>Central management</li>
+    <li>Limited team autonomy</li>
+  </ul>
+</div>
+
+::right::
+
+<div v-click class="phase-box green-tint">
+  <div class="text-xl mb-2">🚀 Service Era</div>
+  <ul class="text-sm">
+    <li>Independent services</li>
+    <li>Isolated changes</li>
+    <li>Team-owned databases</li>
+    <li>Self-service platform</li>
+    <li>Continuous deployment</li>
+    <li>"You build it, you run it"</li>
+  </ul>
+</div>
+
+<style>
+.phase-box {
+  @apply p-4 rounded;
+}
+.red-tint {
+  @apply bg-red-500 bg-opacity-10;
+}
+.green-tint {
+  @apply bg-green-500 bg-opacity-10;
+}
+</style>
+
+<!--
+# Speaker Notes
+
+Setup:
+- "Let's see what actually changed day-to-day..."
+
+Evolution Impact:
+
+1. Technical Changes
+   - From single app to many services
+   - From shared DB to dedicated databases
+   - From manual to automated deployment
+   - From central to distributed control
+
+2. Team Changes
+   - From waiting to self-service
+   - From coordination to autonomy
+   - From bottlenecks to flow
+   - From restriction to enablement
+
+3. Culture Shift
+   - Service ownership mentality
+   - End-to-end responsibility
+   - Empowered teams
+   - Innovation freedom
+
+Real Examples:
+- Database provisioning: weeks → minutes
+- Deployment frequency: days → hours
+- Team onboarding: months → weeks
+- Configuration changes: tickets → self-service
+
+Questions to Ask:
+- "Which changes resonate most?"
+- "What challenges do you see in this transition?"
+- "How would you manage this evolution?"
+
+Transition to Platform:
+- Lead into how we enabled this transformation...
+-->
+
+---
+layout: center
+hideInToc: true
+---
+
+# Resource growth
+In one year
+
+```mermaid {scale: 0.7}
+xychart-beta
+    x-axis "Date" ["Nov 12", "Jan 24", "Apr 6", "Jun 18", "Aug 30", "Nov 11"]
+    y-axis "Count" 2000 --> 8000
+    line [2500, 3500, 5000, 5500, 6500, 7200]
+```
+
+---
+layout: center
+hideInToc: true
+---
+
 # Infrastructure Delivery Evolution
 From weeks to minutes, from process to platform
 
@@ -209,7 +389,7 @@ flowchart TB
         S3[Services]
     end
 
-    subgraph Teams ["Development Teams"]
+    subgraph Teams ["Product Teams"]
         direction TB
         T1[Team 1]
         T2[Team 2]
@@ -217,7 +397,6 @@ flowchart TB
     end
 
     Platform --> Teams
-    Teams --> A[Applications]
 
 ```
 
@@ -311,7 +490,7 @@ Empowering teams while maintaining control
       <li>Quick provisioning</li>
       <li>Standard patterns</li>
       <li>Clear documentation</li>
-      <li>Focus on code</li>
+      <li>Focus on business code</li>
     </ul>
   </div>
 </div>
@@ -322,11 +501,11 @@ Empowering teams while maintaining control
   <div v-click class="benefit-box">
     <div class="text-xl mb-2">🏗️ For Platform Teams</div>
     <ul class="text-sm">
-      <li>Controlled scaling</li>
+      <li>Efficient scaling</li>
       <li>Security enforcement</li>
       <li>Resource optimization</li>
       <li>Easier maintenance</li>
-      <li>Happy developers</li>
+      <li>Happy bosses</li>
     </ul>
   </div>
 </div>
@@ -385,186 +564,6 @@ Questions to Ask:
 Next Steps:
 - Transition to how we implement this...
 -->
-
----
-layout: center
-hideInToc: true
----
-
-# The Mews Journey
-
-```mermaid {scale: 0.6}
-timeline
-    title Infrastructure Evolution
-    section 2012 - Monolith
-        Architecture : Single .NET App
-        : One SQL Database
-        : Simple Deployment
-    section 2022 - Services
-        Multiplication : Breaking Monolith
-        : Multiple Instances
-        : Request-based Routing
-        : Team Coordination
-    section 2023 - Platform
-        Independence : Team Autonomy
-        : Self-service
-        : Standard Patterns
-        : Clear Ownership
-```
-
-<!--
-# Speaker Notes
-
-Setup (1 min):
-- "Let me show you our infrastructure evolution..."
-- Connect to common growth patterns
-
-Journey Phases (4-5 mins):
-
-1. Monolith Phase
-   - Simple but effective initially
-   - One team, one codebase
-   - Fast deployment, but...
-   - All changes affect everyone
-   - Limited team scaling
-
-2. Service Multiplication
-   - Teams growing rapidly
-   - Need for independence
-   - Breaking apart monolith
-   - New challenges emerged:
-     * Deployment coordination
-     * Configuration management
-     * Environment consistency
-     * Team dependencies
-     * "You build it, you run it" mindset
-
-3. Platform Solution
-   - Team independence achieved
-   - Clear ownership boundaries
-   - Standardized practices
-   - Self-service infrastructure
-   - Faster innovation cycle
-
-Real Impact Examples:
-- Deployment time changes
-- Team onboarding speed
-- Innovation velocity
-- Development satisfaction
-
-Questions to Drive Engagement:
-- "Where are your projects on this journey?"
-- "What signs show you need to evolve?"
-- "How would you handle this transition?"
-
-Connect to Their Experience:
-- Reference course project complexity
-- Discuss startup evolution patterns
-- Show industry parallels
--->
-
----
-layout: two-cols-header
-hideInToc: true
----
-
-# Before and After
-Transformation of infrastructure management
-
-::left::
-
-<div v-click class="phase-box red-tint">
-  <div class="text-xl mb-2">⚡ Monolith Era</div>
-  <ul class="text-sm">
-    <li>Single deployment unit</li>
-    <li>All changes affect everyone</li>
-    <li>One database for all</li>
-    <li>Central management</li>
-    <li>Limited team autonomy</li>
-  </ul>
-</div>
-
-::right::
-
-<div v-click class="phase-box green-tint">
-  <div class="text-xl mb-2">🚀 Service Era</div>
-  <ul class="text-sm">
-    <li>Independent services</li>
-    <li>Isolated changes</li>
-    <li>Team-owned databases</li>
-    <li>Self-service platform</li>
-    <li>Continuous deployment</li>
-    <li>"You build it, you run it"</li>
-  </ul>
-</div>
-
-<style>
-.phase-box {
-  @apply p-4 rounded;
-}
-.red-tint {
-  @apply bg-red-500 bg-opacity-10;
-}
-.green-tint {
-  @apply bg-green-500 bg-opacity-10;
-}
-</style>
-
-<!--
-# Speaker Notes
-
-Setup:
-- "Let's see what actually changed day-to-day..."
-
-Evolution Impact:
-
-1. Technical Changes
-   - From single app to many services
-   - From shared DB to dedicated databases
-   - From manual to automated deployment
-   - From central to distributed control
-
-2. Team Changes
-   - From waiting to self-service
-   - From coordination to autonomy
-   - From bottlenecks to flow
-   - From restriction to enablement
-
-3. Culture Shift
-   - Service ownership mentality
-   - End-to-end responsibility
-   - Empowered teams
-   - Innovation freedom
-
-Real Examples:
-- Database provisioning: weeks → minutes
-- Deployment frequency: days → hours
-- Team onboarding: months → weeks
-- Configuration changes: tickets → self-service
-
-Questions to Ask:
-- "Which changes resonate most?"
-- "What challenges do you see in this transition?"
-- "How would you manage this evolution?"
-
-Transition to Platform:
-- Lead into how we enabled this transformation...
--->
-
----
-layout: center
-hideInToc: true
----
-
-# Resource growth
-In one year
-
-```mermaid {scale: 0.7}
-xychart-beta
-    x-axis "Date" ["Nov 12", "Jan 24", "Apr 6", "Jun 18", "Aug 30", "Nov 11"]
-    y-axis "Count" 2000 --> 8000
-    line [2500, 3500, 5000, 5500, 6500, 7200]
-```
 
 ---
 layout: center
@@ -1040,3 +1039,26 @@ Ongoing areas of improvement and focus
 - Show ongoing work
 - Ask for their thoughts
 -->
+
+---
+layout: center
+hideInToc: true
+---
+
+# Quick Questions
+
+<div class="text-xl space-y-8">
+  <div v-click class="question">
+    Have you seen internal platform at work?
+  </div>
+  
+  <div v-click class="question">
+    What if we had team use Azure directly?
+  </div>
+</div>
+
+<style>
+.question {
+  @apply p-4 rounded bg-blue-500 bg-opacity-10 cursor-pointer hover:bg-opacity-20 transition-all;
+}
+</style>

@@ -617,11 +617,11 @@ hideInToc: true
 
 <div class="text-xl space-y-8">
   <div v-click class="question">
-    When do you should project start using IaC?
+    When should your project start using IaC?
   </div>
 
   <div v-click class="question">
-    Other examples of declarative code?
+    Other examples of using declarative code?
   </div>
 </div>
 

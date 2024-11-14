@@ -813,6 +813,10 @@ hideInToc: true
   <div v-click class="question">
     What if I already created some resources manually?
   </div>
+
+  <div v-click class="question">
+    What if I losse my state storage?
+  </div>
 </div>
 
 <style>
