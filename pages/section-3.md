@@ -815,7 +815,7 @@ hideInToc: true
   </div>
 
   <div v-click class="question">
-    What if I losse my state storage?
+    What if I lose my state storage?
   </div>
 </div>
 
